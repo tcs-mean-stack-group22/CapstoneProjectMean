@@ -11,7 +11,7 @@ let ProductRequestModel = require("../model/productRequest.model.js");
 let createRequestForm = (req,res) => {
     productQ = new ProductRequestModel({
          //Variables must match the schema in module 
-         pid: req.body.pid,
+         pname: req.body.pname,
          quanity: req.body.quanity
     })
     productQ.save((err,result) => {

@@ -1,8 +1,8 @@
 <div>
     <form #ngRef="ngForm" (ngSubmit)= "increaseProduct(ngRef.value)">
-       Product Id : <input type="text" name = "pid" ngModel>
+       Product Name : <input type="text" name = "pname" ngModel> <br>
        Product quanity : <input type="number" name = "quanity" ngModel>
-       <br>
+       <br> <br>
        <input type="submit" value="increase product">
        <input type="reset" value="reset">
     </form>

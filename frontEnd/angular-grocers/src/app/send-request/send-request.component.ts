@@ -16,7 +16,7 @@ export class SendRequestComponent implements OnInit {
   }
   increaseProduct(ref:any)
   {
-    console.log(ref.pid)
+    console.log(ref.pname)
     console.log(ref.quanity)
     this.prodServ.sotreProductReqForm(ref). 
     subscribe(result => console.log(result), error => console.log(error));

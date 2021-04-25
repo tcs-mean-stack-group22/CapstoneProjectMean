@@ -1,14 +1,4 @@
 //This is our main applican node app.js 
-/* 
-//Load all required modules    and install in local machine 
-let app = require("express")();
-let bodyParser = require("body-parser");
-let mongoose = require("mongoose");
-let cors = require("cors");
-//Database URL Details 
-let url = "mongodb://localhost:27017/meanStack";
-
-*/
 
 //Load all required modules 
 let app = require("express")();
@@ -36,12 +26,13 @@ mongoose.connect(url,mongooseDbOption);
 //Connect the data 
 mongoose.connection
 
-
 //Flow routing starts from here :
 
 //for increase  product amount by emp to adming -->  .../productRequest
 var productRequest = require("./router/productRequest.router.js");
 //than send the flow to product router.js if the link is :  http://localhost:9090/product/...   
+
+
 
 app.use("/product",productRequest);
 
