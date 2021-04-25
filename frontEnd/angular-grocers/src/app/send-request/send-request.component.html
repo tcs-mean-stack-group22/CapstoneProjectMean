@@ -1,1 +1,10 @@
-<p>send-request works!</p>
+<div>
+    <form #ngRef="ngForm" (ngSubmit)= "increaseProduct(ngRef.value)">
+       Product Id : <input type="text" name = "pid" ngModel>
+       Product quanity : <input type="number" name = "quanity" ngModel>
+       <br>
+       <input type="submit" value="increase product">
+       <input type="reset" value="reset">
+    </form>
+
+</div>
