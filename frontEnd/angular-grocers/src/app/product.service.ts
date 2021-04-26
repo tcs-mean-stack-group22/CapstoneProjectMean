@@ -36,20 +36,20 @@ export class ProductService {
    {
     /*  this.http.post("http://localhost:9090/product/storeProductDetails", productRef  ).
      subscribe(result => console.log(result), error => console.log(error)); */
-     return this.http.post("http://localhost:9090/product/requestForm", productRef ,{responseType:'text'} )
+     return this.http.post("http://localhost:9090/productrequest/requestForm", productRef ,{responseType:'text'} )
 
    }
 
   getProductReqForm() : Observable <RequestForm[]> 
   {
      
-    return  this.http.get<RequestForm[]>("http://localhost:9090/product/retrieveReqForm");
+    return  this.http.get<RequestForm[]>("http://localhost:9090/productrequest/retrieveReqForm");
 
     
   }
 
   removeReqForm(pname:any) {
-    return this.http.delete("http://localhost:9090/product/removeform/" + pname,  {responseType:'text'} );
+    return this.http.delete("http://localhost:9090/productrequest/removeform/" + pname,  {responseType:'text'} );
   }
 
 
