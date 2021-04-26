@@ -29,11 +29,13 @@ mongoose.connection;
 
 //for increase  product amount by emp to adming -->  .../productRequest
 let productRequest = require('./router/productRequest.router.js');
-let productRoutes = require('./router/product.router');
+let productRoutes = require('./router/product.router.js');
+let userRoutes = require('./router/user.router.js');
 //than send the flow to product router.js if the link is :  http://localhost:9090/product/...
 
 app.use('/product', productRoutes);
 app.use('/productrequest', productRequest);
+app.use('/user',userRoutes );
 
 // Next
 
@@ -42,6 +44,6 @@ app.listen(9090, () => console.log('Server running on port number 9090'));
 /*  List of links :  
 http://localhost:9090/product/productRequest
 
-
+http://localhost:9090/user/signup
 
 */
