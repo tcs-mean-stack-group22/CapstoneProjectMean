@@ -1,0 +1,10 @@
+<div>
+    <form #ngRef="ngForm" (ngSubmit)= "login(ngRef.value)">
+        User Name : <input type="text" name = "username" ngModel required> <br>
+        Password : <input type="number" name = "password" ngModel required>
+        <br> <br>
+        {{resultMsg}}
+        <input type="submit" value="Log in">
+        <input type="reset" value="reset">
+     </form>
+</div>

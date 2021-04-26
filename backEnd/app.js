@@ -45,5 +45,6 @@ app.listen(9090, () => console.log('Server running on port number 9090'));
 http://localhost:9090/product/productRequest
 
 http://localhost:9090/user/signup
+http://localhost:9090/user/login
 
 */
