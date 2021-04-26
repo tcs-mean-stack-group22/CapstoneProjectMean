@@ -5,6 +5,8 @@ let createUser = (req,res) => {
          //Variables must match the schema in module 
          firstname: req.body.firstName,
          lastname: req.body.lastname ,
+         username: req.body.username ,
+         password: req.body.password ,
          email: req.body.email,
          dob: req.body.dob , 
          phoneNum: req.body.phoneNum,
@@ -27,4 +29,11 @@ let createUser = (req,res) => {
         }
     });
 }
+
+
+  //the function will take username & password from user and return json first last name and type
+
+
+
+
 module.exports = {createUser}

@@ -17,8 +17,7 @@ export class UserService {
     return this.http.post("http://localhost:9090/user/signup" , info , {responseType:'text'} )
   }
 
-
-
+  
 
 
 
