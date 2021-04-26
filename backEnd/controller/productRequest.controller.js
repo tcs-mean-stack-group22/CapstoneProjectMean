@@ -8,6 +8,7 @@
 
 let ProductRequestModel = require("../model/productRequest.model.js");
 
+//Create a formRequest 
 let createRequestForm = (req,res) => {
     productQ = new ProductRequestModel({
          //Variables must match the schema in module 
@@ -26,4 +27,46 @@ let createRequestForm = (req,res) => {
     });
 }
 
-module.exports = {createRequestForm};
+//read the formRequest
+let getAllFormsRequests =(req,res)=> {
+
+    ProductRequestModel.find({},(err,result)=> {
+        if(!err){
+            res.json(result);
+        }
+        else{
+            res.write("eror" , err)
+        }
+    })
+
+}
+
+
+//delete a formRequest 
+let removeFormReqByName = (req, res) => {
+    let pname = req.params.pid;
+
+    ProductRequestModel.deleteOne({pname : pname}, (err, result) => {
+        if(!err)
+        {
+            if(result.deletedCount > 0 )
+            {
+                res.send("Record Belonging to: " + pname + "deleted successfully");
+            }
+              
+            else
+              {  res.send("record was not present" + pname ) ; 
+            }
+        }
+        else
+        {
+            res.send("Error genereated: " + err);
+    
+        }
+    })
+    
+}
+
+
+
+module.exports = {createRequestForm, getAllFormsRequests, removeFormReqByName};

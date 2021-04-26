@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import { RequestForm } from './ModulerequetForm';
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -34,11 +36,21 @@ export class ProductService {
    {
     /*  this.http.post("http://localhost:9090/product/storeProductDetails", productRef  ).
      subscribe(result => console.log(result), error => console.log(error)); */
-     return this.http.post("http://localhost:9090/product/productRequest", productRef ,{responseType:'text'} )
+     return this.http.post("http://localhost:9090/product/requestForm", productRef ,{responseType:'text'} )
 
    }
 
+  getProductReqForm() : Observable <RequestForm[]> 
+  {
+     
+    return  this.http.get<RequestForm[]>("http://localhost:9090/product/retrieveReqForm");
 
+    
+  }
+
+  removeReqForm(pname:any) {
+    return this.http.delete("http://localhost:9090/product/removeform/" + pname,  {responseType:'text'} );
+  }
 
 
 }

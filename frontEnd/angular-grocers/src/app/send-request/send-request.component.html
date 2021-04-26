@@ -1,10 +1,27 @@
 <div>
     <form #ngRef="ngForm" (ngSubmit)= "increaseProduct(ngRef.value)">
-       Product Name : <input type="text" name = "pname" ngModel> <br>
-       Product quanity : <input type="number" name = "quanity" ngModel>
+       Product Name : <input type="text" name = "pname" ngModel required> <br>
+       Product quanity : <input type="number" name = "quanity" ngModel required>
        <br> <br>
        <input type="submit" value="increase product">
        <input type="reset" value="reset">
     </form>
+<hr>
+<div>
+    <h2>Test</h2>
+    <input type="button" value = "getForm" (click)= "getForm()">
+   <ul *ngFor = "let fm of Forms">
+       <li >{{fm._id}}  |   {{fm.pname}} |  {{fm.quanity}}</li>
+   </ul>
 
+    <br>
+   <h2> Delete form </h2> 
+   <form #ref="ngForm" (ngSubmit)="removeForm(ref.value)" >
+
+    Enter Name of the product to be deleted:  <input type="text" name="delName" ngModel required >
+    <input type="submit" value = "removeForm" >
+   </form> 
+
+    
+</div>
 </div>

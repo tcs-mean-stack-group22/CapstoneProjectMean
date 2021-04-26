@@ -44,7 +44,8 @@ app.listen(9090,()=>console.log("Server running on port number 9090"));
 
 /*  List of links :  
 http://localhost:9090/product/productRequest
-
+http://localhost:9090/product/retrieveReqForm
+http://localhost:9090/product/removeform
 
 
 */

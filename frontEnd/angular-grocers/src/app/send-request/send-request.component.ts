@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RequestForm } from '../ModulerequetForm';
 import { ProductService } from '../product.service';
 
 @Component({
@@ -21,4 +22,21 @@ export class SendRequestComponent implements OnInit {
     this.prodServ.sotreProductReqForm(ref). 
     subscribe(result => console.log(result), error => console.log(error));
   }
+
+  Forms?:Array<RequestForm>;
+  getForm()
+  {
+
+    console.log("getform")
+    this.prodServ.getProductReqForm().subscribe(result => this.Forms=result)
+  }
+
+  delMsg:String = ""
+  removeForm(ref:any)
+  {
+    console.log("removeform" + ref.delName);
+
+    this.prodServ.removeReqForm(ref.delName).subscribe((result:String) => this.delMsg = result)
+  }
+
 }
