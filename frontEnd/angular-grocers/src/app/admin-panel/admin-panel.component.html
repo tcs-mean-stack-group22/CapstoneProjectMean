@@ -1,16 +1,17 @@
 <div class="main-container container-fluid">
     <div class='links-container mb-3'>
-        <button name="viewProducts" (click)='onSelectLink($event)'>View Products</button>
-        <button name="addProduct" (click)='onSelectLink($event)'>Add Product</button>
-        <button name="viewRequests" (click)='onSelectLink($event)'>View Requests</button>
+        <button class="btn btn-outline-primary" name="viewProducts" (click)='onSelectLink($event)'>View Products</button>
+        <button class="btn btn-outline-primary"name="addProduct" (click)='onSelectLink($event)'>Add Product</button>
+        <button class="btn btn-outline-primary"name="viewRequests" (click)='onSelectLink($event)'>View Requests</button>
     </div>
+    <br><br>
     <div class="tab-container">
         <div [ngSwitch]="selectedTab">
             <app-add-product *ngSwitchCase="'addProduct'"></app-add-product>
             <app-view-products *ngSwitchCase="'viewProducts'"></app-view-products>
             <app-view-requests *ngSwitchCase="'viewRequests'"></app-view-requests>
             <div *ngSwitchDefault>
-                <h1>Welcome to Admin Panel</h1>
+                
             </div>
         </div>
     </div>

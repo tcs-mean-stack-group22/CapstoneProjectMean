@@ -1,0 +1,16 @@
+form{
+   
+    margin-left: 440px;
+    max-width: 445px;
+
+}
+.btn{
+    margin:20px;
+    display: inline;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 75px;
+    width: 80px;
+    height: 45px;
+}

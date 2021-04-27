@@ -15,7 +15,10 @@ import { UpdateProductComponent } from './update-product/update-product.componen
 import { ViewProductsComponent } from './view-products/view-products.component';
 import { ViewRequestsComponent } from './view-requests/view-requests.component';
 import { LockUserComponent } from './lock-user/lock-user.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 import { OrderStatusComponent } from './order-status/order-status.component';
+
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -29,7 +32,12 @@ import { OrderStatusComponent } from './order-status/order-status.component';
 		ViewProductsComponent,
 		ViewRequestsComponent ,
 		LockUserComponent,
+
+  NavbarComponent,
+  FooterComponent,
+
   OrderStatusComponent
+
 	],
 	imports: [ BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, ReactiveFormsModule ],
 	providers: [],
