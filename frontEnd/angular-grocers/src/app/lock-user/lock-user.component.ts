@@ -10,7 +10,7 @@ import { UserService } from '../user.service';
 })
 export class LockUserComponent implements OnInit {
   lockUserArray:Array<any> = []
-  newArr:Array<User> = []
+  msg:String = ""
   tmp:any;
   constructor(public userServ:UserService) { }
   cnt:number = 0;
@@ -28,6 +28,10 @@ export class LockUserComponent implements OnInit {
 
   unlockUser(ref:any)
   {
-    
+    console.log(ref.userId)
+    this.userServ.unlockUserAccount(ref).subscribe(result => this.msg = "Account user is successfully unlocked"  , err =>  { 
+      this.msg = "account status did not get updated."
+      console.log (err)
+      } )
   }
 }

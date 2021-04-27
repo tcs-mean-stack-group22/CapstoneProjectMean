@@ -35,4 +35,11 @@ export class UserService {
    return this.http.get<User[]>("http://localhost:9090/user/lockUser" , { responseType: 'json' });
  }
 
+
+unlockUserAccount(ref:any) 
+{
+  return this.http.put("http://localhost:9090/user/unlockUser" , ref , {responseType:'text'} )
+} 
+
+
 }

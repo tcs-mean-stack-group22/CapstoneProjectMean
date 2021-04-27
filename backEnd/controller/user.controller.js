@@ -86,9 +86,7 @@ let storePass= (req,res)=> {
 
 
 let retrieveAllLockedUserData = (err, res) => {
-     //passing id path throught param  
-     //Was created in modole 
-     
+
    // console.log(Math.floor(Math.random() * 100))
      userModel.find( {  lock:true }, (err,data) =>{
         if(!err)
@@ -104,4 +102,26 @@ let retrieveAllLockedUserData = (err, res) => {
 }
 
 
-module.exports = {createUser , retrieveDataFromUser , storePass, retrieveAllLockedUserData } 
+let updateUnlockUser = (req , res) => {
+    let userName = req.body.userName ;
+    let usrId = req.body.userId ;
+    console.log(userName)
+    console.log(usrId)
+    userModel.updateOne( {$or : [ {_id:usrId} , {username : userName}    ] }  ,{$set:{lock:false}},(err,result)=> {
+        if(!err){
+            if(result.nModified > 0){
+                    res.send("User account is unblock now.")
+            }else {
+                    res.send("User Status did not get updated.");
+            }
+        }else {
+            res.send("Error generated "+err);
+        }
+    })
+}
+
+
+
+
+
+module.exports = {createUser , retrieveDataFromUser , storePass, retrieveAllLockedUserData , updateUnlockUser } 
