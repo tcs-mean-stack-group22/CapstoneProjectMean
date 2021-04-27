@@ -9,6 +9,7 @@ let userControler = require("../controller/user.controller.js");
 
 router.post("/signup", userControler.createUser);
 router.post("/login", userControler.retrieveDataFromUser);
+router.put("/editEmployee", userControler.storePass);
 
 //router.post("/insert", productRequest.createRequestForm);
 

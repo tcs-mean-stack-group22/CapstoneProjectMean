@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { User } from './model.user';
+
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +24,10 @@ export class UserService {
     return this.http.post("http://localhost:9090/user/login" , ref )
   }
 
-  
+  saveEmpPass(pass:any)
+  {
+    return this.http.put("http://localhost:9090/user/editEmployee" , pass , {responseType:'text'} )
+  }
 
 
 

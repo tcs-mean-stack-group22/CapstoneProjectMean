@@ -8,12 +8,14 @@ import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 @NgModule({
   declarations: [
     AppComponent,
     SendRequestComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    EditProfileComponent
   ],
   imports: [
     BrowserModule,

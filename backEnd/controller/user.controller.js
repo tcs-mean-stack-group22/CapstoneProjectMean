@@ -3,7 +3,7 @@ let userModel = require("../model/user.model.js");
 let createUser = (req,res) => {
     productQ = new userModel({
          //Variables must match the schema in module 
-         firstname: req.body.firstName,
+         firstname: req.body.firstname,
          lastname: req.body.lastname ,
          username: req.body.username ,
          password: req.body.password ,
@@ -15,9 +15,7 @@ let createUser = (req,res) => {
          lock: req.body.lock,
          accountnumber: req.body.accountnumber,
          amountDeposit: req.body.amountDeposit
-  
-
-    })
+      })
     productQ.save((err,result) => {
         if (!err)
         {
@@ -36,33 +34,17 @@ let createUser = (req,res) => {
         let userN =  req.body.username
         let pass =  req.body.password
        
-        userModel.find(  {$and: [ {username: userN },{ password: pass} ]  }  , (err,result) =>{
+        userModel.findOne(  {$and: [ {username: userN },{ password: pass} ]  }  , (err,result) =>{
             if(!err)
             {
-                //To return only 1 object 
-                
-                if(result.length > 0)
-                {
-                   
-                   
                     return res.status(200).json({
-                        username : result[0].firstname ,
-                        lastname : result[0].lastname ,
-                        type : result[0].type 
-
+                        firstname : result.firstname ,
+                        lastname : result.lastname ,
+                        password : result.password ,
+                        type : result.type 
+                        
                     });
-                }
-                else
-                {
-                    return res.status(529).json({
-                        error: err,
-                        message: 'Invalid username password'
-                    });
-               
-                }
-               
-                //to return array
-               // res.json(data);
+   
             }
             else {
                 return res.status(404).json({
@@ -77,4 +59,27 @@ let createUser = (req,res) => {
 
 
 
-module.exports = {createUser , retrieveDataFromUser }
+//Updating product 
+let storePass= (req,res)=> {
+    let passW = req.body.newPass;
+    let userN = req.body.username;
+    console.log(passW)
+    console.log(userN)
+    userModel.updateOne({username:userN},{$set:{password:passW}},(err,result)=> {
+        if(!err){
+            if(result.nModified > 0){
+                    res.send("Password was updated succesfully")
+            }else {
+                    res.send("Username is not valid+");
+            }
+        }else {
+            res.send("Error generated "+err);
+        }
+    })
+
+}
+
+   
+
+
+module.exports = {createUser , retrieveDataFromUser , storePass}
