@@ -15,6 +15,7 @@ import { UpdateProductComponent } from './update-product/update-product.componen
 import { ViewProductsComponent } from './view-products/view-products.component';
 import { ViewRequestsComponent } from './view-requests/view-requests.component';
 import { LockUserComponent } from './lock-user/lock-user.component';
+import { OrderStatusComponent } from './order-status/order-status.component';
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -27,7 +28,8 @@ import { LockUserComponent } from './lock-user/lock-user.component';
 		UpdateProductComponent,
 		ViewProductsComponent,
 		ViewRequestsComponent ,
-		LockUserComponent
+		LockUserComponent,
+  OrderStatusComponent
 	],
 	imports: [ BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, ReactiveFormsModule ],
 	providers: [],
