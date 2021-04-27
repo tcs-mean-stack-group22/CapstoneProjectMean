@@ -47,7 +47,7 @@ class ProductService {
 	}
 
 	//post method 1st parameter url and 2nd parameter json data
-	sotreProductReqForm(productRef: any) {
+	storeProductReqForm(productRef: any) {
 		/*  this.http.post("http://localhost:9090/product/storeProductDetails", productRef  ).
      subscribe(result => console.log(result), error => console.log(error)); */
 		return this.http.post('http://localhost:9090/productrequest/requestForm', productRef, { responseType: 'text' });

@@ -1,9 +1,14 @@
 const UserModel = require("../model/user.model.js");
 let userModel = require("../model/user.model.js");
+let cnt = 0 ;
 
 let createUser = (req,res) => {
+   let cnt2 = cnt++ ;
+   cnt2 = cnt2 + Math.floor(Math.random() * 10000)     
     productQ = new userModel({
          //Variables must match the schema in module 
+
+         _id :  cnt2,
          firstname: req.body.firstname,
          lastname: req.body.lastname ,
          username: req.body.username ,
@@ -64,8 +69,7 @@ let createUser = (req,res) => {
 let storePass= (req,res)=> {
     let passW = req.body.newPass;
     let userN = req.body.username;
-    console.log(passW)
-    console.log(userN)
+
     userModel.updateOne({username:userN},{$set:{password:passW}},(err,result)=> {
         if(!err){
             if(result.nModified > 0){
@@ -84,10 +88,12 @@ let storePass= (req,res)=> {
 let retrieveAllLockedUserData = (err, res) => {
      //passing id path throught param  
      //Was created in modole 
+     
+   // console.log(Math.floor(Math.random() * 100))
      userModel.find( {  lock:true }, (err,data) =>{
         if(!err)
         {
-            res.json(data);
+            res.json(data );
         }
         else
         {

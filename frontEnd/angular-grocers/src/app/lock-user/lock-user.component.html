@@ -1,18 +1,31 @@
 <div>
     <h2>View the users whose account are locked</h2>
     <table border = "1px">
-        <tr>
+        <tr >
             <th>User Name</th>
-            <th>First name</th>
-            <th>Last Name</th>
+            <th>Last name</th>
+            <th>email Name</th>
+            <th>Account Lock Status</th>
         </tr>
-        <tr>
-            <th></th>
+        <tbody >
+
+            <tr *ngFor = "let o of tmp" >
+            <td>{{o.username}}</td>
+            <td >{{o.lastname}}</td>
+            <td >{{o.email}}</td>
+            <td >{{o.lock}}</td>
+
         </tr>
+        </tbody>
     </table>
+    
+    <br>
+    <br>   
+    <hr>
+    <br>
+    <br>
 
-
-    <h2>Welocme to lock Screen page</h2>
+    <h2>Remove lock user account</h2>
     <form #ngRef="ngForm" (ngSubmit)= "unlockUser(ngRef.value)">
         User Name : <input type="text" name = "username" ngModel required> <br>
         <br> <br>

@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, ModuleWithComponentFactories } from '@angular/core';
 import { Observable } from 'rxjs';
 
+import { User } from './model.user';
 
 @Injectable({
   providedIn: 'root'
@@ -29,6 +30,9 @@ export class UserService {
     return this.http.put("http://localhost:9090/user/editEmployee" , pass , {responseType:'text'} )
   }
 
-
+ getAllLockUser()  : Observable <User[]>
+ {
+   return this.http.get<User[]>("http://localhost:9090/user/lockUser" , { responseType: 'json' });
+ }
 
 }
