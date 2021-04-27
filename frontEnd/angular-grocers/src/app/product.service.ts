@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { RequestForm } from './ModulerequetForm';
 import { Observable } from 'rxjs';
 @Injectable({
-  providedIn: 'root'
+	providedIn: 'root'
 })
-/* 
+export /* 
 By defualt return type of all observable 
 if the return type is string than we have to perform {responseType:'text'} 
 
@@ -23,35 +23,41 @@ http.delete ("url" , {responseType:'text'})
 http.put ("url", jsonData , {responseType:'text'})
 */
 
+class ProductService {
+	constructor(public http: HttpClient) {}
 
+	storeProduct(data: any) {
+		return this.http.post('http://localhost:9090/product/addProduct', data, { responseType: 'json' });
+	}
 
-export class ProductService {
+	retrieveProducts() {
+		return this.http.get('http://localhost:9090/product/allProducts', { responseType: 'json' });
+	}
 
-  constructor(public http:HttpClient) { }
+	retrieveProductById(id: any) {
+		return this.http.get(`http://localhost:9090/product/retrieveProductById/${id}`, { responseType: 'json' });
+	}
 
+	deleteProduct(id: any) {
+		return this.http.delete(`http://localhost:9090/product/deleteProduct/${id}`, { responseType: 'json' });
+	}
 
+	updateProduct(data: any) {
+		return this.http.put('http://localhost:9090/product/updateProduct', data, { responseType: 'json' });
+	}
 
-   //post method 1st parameter url and 2nd parameter json data
-   sotreProductReqForm(productRef:any)
-   {
-    /*  this.http.post("http://localhost:9090/product/storeProductDetails", productRef  ).
+	//post method 1st parameter url and 2nd parameter json data
+	sotreProductReqForm(productRef: any) {
+		/*  this.http.post("http://localhost:9090/product/storeProductDetails", productRef  ).
      subscribe(result => console.log(result), error => console.log(error)); */
-     return this.http.post("http://localhost:9090/productrequest/requestForm", productRef ,{responseType:'text'} )
+		return this.http.post('http://localhost:9090/productrequest/requestForm', productRef, { responseType: 'text' });
+	}
 
-   }
+	getProductReqForm(): Observable<RequestForm[]> {
+		return this.http.get<RequestForm[]>('http://localhost:9090/productrequest/retrieveReqForm');
+	}
 
-  getProductReqForm() : Observable <RequestForm[]> 
-  {
-     
-    return  this.http.get<RequestForm[]>("http://localhost:9090/productrequest/retrieveReqForm");
-
-    
-  }
-
-  removeReqForm(pname:any) {
-    return this.http.delete("http://localhost:9090/productrequest/removeform/" + pname,  {responseType:'text'} );
-  }
-
-
+	removeReqForm(pname: any) {
+		return this.http.delete('http://localhost:9090/productrequest/removeform/' + pname, { responseType: 'text' });
+	}
 }
-

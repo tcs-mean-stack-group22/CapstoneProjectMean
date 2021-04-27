@@ -1,10 +1,8 @@
-let express = require("express");
-let router = express.Router();  //router reference. 
-let {getTicketDetails, postTicketDetails} = require("../controller/ticket.controller");
+let express = require('express');
+let router = express.Router(); //router reference.
+let { getTicketDetails, postTicketDetails } = require('../controller/ticket.controller');
 
+router.get('/allTicketDetails', getTicketDetails);
+router.post('/addTicket', postTicketDetails);
 
-console.log("Made it to Router")
-router.get("/allTicketDetails",getTicketDetails);
-router.post("/addTicket", postTicketDetails)
-
-module.exports=router;
+module.exports = router;
