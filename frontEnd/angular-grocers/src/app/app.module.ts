@@ -9,26 +9,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
-<<<<<<< HEAD
-import { LockUserComponent } from './lock-user/lock-user.component';
-@NgModule({
-  declarations: [
-    AppComponent,
-    SendRequestComponent,
-    SignupComponent,
-    LoginComponent,
-    EditProfileComponent,
-    LockUserComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-=======
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
@@ -50,6 +30,5 @@ import { ViewRequestsComponent } from './view-requests/view-requests.component';
 	imports: [ BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, ReactiveFormsModule ],
 	providers: [],
 	bootstrap: [ AppComponent ]
->>>>>>> avichel
 })
 export class AppModule {}
