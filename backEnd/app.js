@@ -39,7 +39,7 @@ app.use('/product', productRoutes);
 app.use('/productrequest', productRequest);
 app.use('/user',userRoutes );
 app.use('/ticket',ticketRoutes);
-app.use('./order',orderRoutes)
+app.use('/order',orderRoutes)
 
 // Next
 

@@ -10,7 +10,12 @@ let userControler = require("../controller/user.controller.js");
 router.post("/signup", userControler.createUser);
 router.post("/login", userControler.retrieveDataFromUser);
 router.put("/editEmployee", userControler.storePass);
+router.get("/lockUser", userControler.retrieveAllLockedUserData);
 
 //router.post("/insert", productRequest.createRequestForm);
+/* 
+http://localhost:9090/user/login
+http://localhost:9090/user/lockUser
 
+*/
 module.exports = router;

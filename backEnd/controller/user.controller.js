@@ -1,3 +1,4 @@
+const UserModel = require("../model/user.model.js");
 let userModel = require("../model/user.model.js");
 
 let createUser = (req,res) => {
@@ -79,7 +80,22 @@ let storePass= (req,res)=> {
 
 }
 
-   
+
+let retrieveAllLockedUserData = (err, res) => {
+     //passing id path throught param  
+     //Was created in modole 
+     userModel.find( {  lock:true }, (err,data) =>{
+        if(!err)
+        {
+            res.json(data);
+        }
+        else
+        {
+            res.send("The list is empty" , err)
+        }
+    }) 
+ 
+}
 
 
-module.exports = {createUser , retrieveDataFromUser , storePass}
+module.exports = {createUser , retrieveDataFromUser , storePass, retrieveAllLockedUserData } 

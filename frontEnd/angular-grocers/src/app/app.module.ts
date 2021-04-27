@@ -9,13 +9,15 @@ import {HttpClientModule} from '@angular/common/http';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { LockUserComponent } from './lock-user/lock-user.component';
 @NgModule({
   declarations: [
     AppComponent,
     SendRequestComponent,
     SignupComponent,
     LoginComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    LockUserComponent
   ],
   imports: [
     BrowserModule,

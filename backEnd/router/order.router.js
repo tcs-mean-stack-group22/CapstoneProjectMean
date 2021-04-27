@@ -1,6 +1,6 @@
 let express = require("express");
 let router = express.Router();  //router reference. 
-let {getOrderDetails, postOrderDetails} = require("../controller/order.controller");
+let {getOrderDetails, postOrderDetails} = require("../controller/orders.controller.js");
 
 
 console.log("Made it to Router")
