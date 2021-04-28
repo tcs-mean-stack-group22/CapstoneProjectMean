@@ -50,26 +50,32 @@ export class CheckoutComponent implements OnInit {
     let user_id = localStorage.getItem("info")
     let a; 
     let b; 
+
     if(user_id != null){
         a = JSON.parse(user_id)
         b = a.userId
+        
     }
     
-    let y = this.amount - this.sum;
+   
+
+    let info = localStorage.getItem("info")
+    if(info != null){
+      let infoArray = JSON.parse(info)
+      infoArray.amountDeposit = this.amount - this.sum;
+      localStorage.setItem("info", JSON.stringify(infoArray))
+    }
+
+
+
+    // Send Order to table
     let date: Date =  new Date();  
     let date2: Date =  new Date(); 
     date2.setDate(date.getDate()+7);
-
-    
-    let model = new Order(b,date, date2,"Preparing to be Shipped",this.productList.length )
-
+    let model = new Order(b,date, date2,"Preparing to be Shipped",this.productList.length)
     this.orderService.updateOrders(model).subscribe((res) => {
       console.log(res)
     } )
-  
-  
-    console.log("Funds will be update from Backend")
-    console.log(this.productList.length)
   }
 
 }
