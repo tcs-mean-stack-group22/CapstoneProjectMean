@@ -32,7 +32,7 @@ userArr:Array<any> = []
 
         let tmp = JSON.parse(JSON.stringify(result))
     
-        localStorage.setItem(tmp.username, tmp);
+        localStorage.setItem("info", tmp);
   /*       console.log(tmp.userId)
         console.log(tmp.firstname)  //undefined    */
       
