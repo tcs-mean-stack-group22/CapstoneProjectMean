@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { LockUserComponent } from './lock-user/lock-user.component';
 import { OrderStatusComponent } from './order-status/order-status.component';
+import { SendRequestComponent } from './send-request/send-request.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
 
@@ -13,6 +14,8 @@ const routes: Routes = [
 	{ path: 'signup', component: SignupComponent },
 	{ path: 'adminpanel', component: AdminPanelComponent },
 	{ path: 'lockuser', component: LockUserComponent },
+	{ path: 'orderstatus', component: OrderStatusComponent },
+	{ path: 'sendrequest', component: SendRequestComponent },
 	{ path: 'orderstatus', component: OrderStatusComponent },
 	{ path: 'editprofile', component: EditProfileComponent },
 	{ path: 'updateproduct', component: UpdateProductComponent },

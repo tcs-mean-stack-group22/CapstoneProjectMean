@@ -1,14 +1,18 @@
-<div>
-    <h2>Edit Profile</h2>
-    <form #ngRef="ngForm" (ngSubmit)= "changePassword(ngRef.value)">
-        Employee UserName : <input type="text" name = "username" ngModel required> <br>
-        Current Password : <input type="text" name = "password" ngModel required> <br>
-        New Password : <input type="text" name = "newPass" ngModel required> <br>
-        New Password : <input type="text" name = "newPass2" ngModel required> <br>
-        <br> <br>
-       
-        <input type="submit" value="Log in">
-        <input type="reset" value="reset">
-     </form>
-     {{resultMsg}}
-</div>
+<div class="container">
+    <div class="body" style="align-items: center;">
+        <h2 class="text-center" style="margin:40px;">Edit Profile</h2>
+        <div>
+            <form #ngRef="ngForm" (ngSubmit)="changePassword(ngRef.value)">
+                Employee UserName : <input type="text" class="form-control" name="username" ngModel required> <br>
+                Current Password : <input type="text" class="form-control" name="password" ngModel required> <br>
+                New Password : <input type="text" class="form-control" name="newPass" ngModel required> <br>
+                New Password : <input type="text" class="form-control" name="newPass2" ngModel required> <br>
+             
+
+                <input type="submit"  class="col-4 btn btn-primary btn-sm float-left" value="Log in">
+                <input type="reset"  class="col-4 btn btn-secondary btn-sm float-right" value="reset">
+            </form>
+            {{resultMsg}}
+        </div>
+    </div>
+    </div>
