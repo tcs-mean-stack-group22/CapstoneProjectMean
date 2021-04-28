@@ -1,0 +1,343 @@
+[33mcommit a38a560c93a7748a5ec624e308f44d373601b21e[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Mike Batani <mkbatani@gmail.com>
+Date:   Wed Apr 28 10:56:16 2021 -0700
+
+    admin modified
+
+[33mcommit 4ede16f9885f45896263a5bc5b5cae70cb35eb67[m
+Merge: 27bd321 a5d045a
+Author: Mehrdad ekbatani <59129726+Mkbatni@users.noreply.github.com>
+Date:   Wed Apr 28 10:51:42 2021 -0700
+
+    Merge pull request #11 from tcs-mean-stack-group22/mehrdad
+    
+    view request added and adming pannel modified
+
+[33mcommit a5d045a5c92d799354b742e87e6206f1e1fc164a[m[33m ([m[1;31morigin/mehrdad[m[33m, [m[1;32mmehrdad[m[33m)[m
+Author: Mike Batani <mkbatani@gmail.com>
+Date:   Wed Apr 28 10:50:54 2021 -0700
+
+    view request added and adming pannel modified
+
+[33mcommit 27bd3215480daa92507aad4d5288ede2abbdada6[m
+Merge: dd6af21 a1761c7
+Author: Harshith Gudapati <jinnu95@gmail.com>
+Date:   Wed Apr 28 11:38:05 2021 -0500
+
+    Merge pull request #10 from tcs-mean-stack-group22/harshith12
+    
+    Harshith12
+
+[33mcommit a1761c7549a2153a5647852215c2b4c40930ee34[m[33m ([m[1;31morigin/harshith12[m[33m)[m
+Author: Harshith Gudapati <jinnu95@gmail.com>
+Date:   Wed Apr 28 11:36:42 2021 -0500
+
+    Edited lock-user  component
+
+[33mcommit dd6af21db856e7ef96dc2c022f4ed257b00ee601[m
+Author: Noah Zbinden <manoahz@gmail.com>
+Date:   Wed Apr 28 11:22:39 2021 -0500
+
+    Number to String
+
+[33mcommit 1614f313106581be16ecc308d33b5c1d744f4faa[m
+Author: Noah Zbinden <manoahz@gmail.com>
+Date:   Wed Apr 28 10:51:39 2021 -0500
+
+    Order Model + Controller
+
+[33mcommit 5f2190017836c1b6b5e789566b31021ff108972c[m
+Author: Harshith Gudapati <jinnu95@gmail.com>
+Date:   Wed Apr 28 10:48:55 2021 -0500
+
+    signup component fixes
+
+[33mcommit f80e4efdda2fbae2e6937aa7903917bffbff8189[m
+Author: Harshith Gudapati <jinnu95@gmail.com>
+Date:   Wed Apr 28 10:46:38 2021 -0500
+
+    signup component fixes
+
+[33mcommit ebceb4b304cd414af3c90b54c5241a6871adf148[m
+Merge: 9b937f1 1e8f449
+Author: Harshith Gudapati <jinnu95@gmail.com>
+Date:   Wed Apr 28 10:40:14 2021 -0500
+
+    Merge pull request #8 from tcs-mean-stack-group22/harshith12
+    
+    added styling for signup component with scrolling
+
+[33mcommit 1e8f449aba851e36b0d0ec7d39d99736817dbc20[m
+Merge: 5388ee9 9b937f1
+Author: Harshith Gudapati <jinnu95@gmail.com>
+Date:   Wed Apr 28 10:40:03 2021 -0500
+
+    Merge branch 'master' into harshith12
+
+[33mcommit 5388ee9756f881f3d0a8cc12bc591892813579b0[m
+Author: Harshith Gudapati <jinnu95@gmail.com>
+Date:   Wed Apr 28 10:36:30 2021 -0500
+
+    added styling for signup component with scrolling
+
+[33mcommit 9b937f1583c78addc6d7f162a5215307f9872690[m
+Merge: ad92956 191640a
+Author: Mehrdad ekbatani <59129726+Mkbatni@users.noreply.github.com>
+Date:   Wed Apr 28 08:32:24 2021 -0700
+
+    Merge pull request #7 from tcs-mean-stack-group22/mehrdad
+    
+    signup modified
+
+[33mcommit 191640a8a140a18eff58de83fb5276e2121fb59e[m
+Merge: d0a5cf4 ad92956
+Author: Mehrdad ekbatani <59129726+Mkbatni@users.noreply.github.com>
+Date:   Wed Apr 28 08:32:00 2021 -0700
+
+    Merge branch 'master' into mehrdad
+
+[33mcommit d0a5cf4c83b4b52675b1545390ecad7b3561a03a[m
+Author: Mike Batani <mkbatani@gmail.com>
+Date:   Tue Apr 27 22:22:59 2021 -0700
+
+    signup modified
+
+[33mcommit ad92956074be5e691b4fa80854370d69748a6b9a[m
+Merge: c702630 bb1e808
+Author: Harshith Gudapati <jinnu95@gmail.com>
+Date:   Tue Apr 27 23:18:56 2021 -0500
+
+    Merge pull request #6 from tcs-mean-stack-group22/harshith12
+    
+     modified  footbar,added scroll bar in view update.html
+
+[33mcommit bb1e808009248134f6fcc8465ee945bf5f6b2250[m
+Author: Harshith Gudapati <jinnu95@gmail.com>
+Date:   Tue Apr 27 23:17:36 2021 -0500
+
+     modified  footbar,added scroll bar in view update.html
+
+[33mcommit c702630d49981a37327e10f9d74da4caa734c029[m
+Author: Mike Batani <mkbatani@gmail.com>
+Date:   Tue Apr 27 19:09:25 2021 -0700
+
+    the login page is complete
+
+[33mcommit 89bb7594611e6798797a5b17d9cdfb8a5973e69e[m
+Merge: 0fdc410 619b140
+Author: Harshith Gudapati <jinnu95@gmail.com>
+Date:   Tue Apr 27 19:04:24 2021 -0500
+
+    Merge pull request #5 from tcs-mean-stack-group22/harshith12
+    
+    Harshith12
+
+[33mcommit 619b140c67299a3328180b6ff7f2d4d512fc7310[m
+Merge: 88ee029 527514c
+Author: Harshith Gudapati <jinnu95@gmail.com>
+Date:   Tue Apr 27 19:03:29 2021 -0500
+
+    Merge branch 'harshith12' of https://github.com/tcs-mean-stack-group22/CapstoneProjectMean into harshith12
+
+[33mcommit 88ee0294c74efd905f5fcf008be5291b11c66f04[m
+Author: Harshith Gudapati <jinnu95@gmail.com>
+Date:   Tue Apr 27 19:02:45 2021 -0500
+
+    changed some styling to flex
+
+[33mcommit 0fdc410434a771acb18c290bae252389aa022836[m
+Merge: fede000 527514c
+Author: Mehrdad ekbatani <59129726+Mkbatni@users.noreply.github.com>
+Date:   Tue Apr 27 15:38:53 2021 -0700
+
+    Merge pull request #4 from tcs-mean-stack-group22/harshith12
+    
+    Harshith12
+
+[33mcommit 527514c0362748417e3a184507c0ad5c8ad45749[m
+Merge: 1fd546a fede000
+Author: Harshith Gudapati <jinnu95@gmail.com>
+Date:   Tue Apr 27 17:35:45 2021 -0500
+
+    Merge branch 'master' into harshith12
+
+[33mcommit 1fd546ad8de0548649340ec8cf01e70c18bec3fd[m
+Author: Harshith Gudapati <jinnu95@gmail.com>
+Date:   Tue Apr 27 17:20:43 2021 -0500
+
+    added navbar, stlyed update-product,add-product,login page
+
+[33mcommit fede000b22102f106894da5ecb9d52e7b2b3bf4c[m
+Author: Mike Batani <mkbatani@gmail.com>
+Date:   Tue Apr 27 15:04:40 2021 -0700
+
+    order-status component was added
+
+[33mcommit ff348ae43bcd70ad29bb6b66d587b8b4aa0e4a0b[m
+Author: Mike Batani <mkbatani@gmail.com>
+Date:   Tue Apr 27 13:48:01 2021 -0700
+
+    finish unlock user function in user
+
+[33mcommit afef31ce5201ff49458b885f20c7a9122e567798[m
+Author: Mike Batani <mkbatani@gmail.com>
+Date:   Tue Apr 27 12:51:08 2021 -0700
+
+    user model and controler has changed
+
+[33mcommit c74684f6c0e44254745205f3dda799ad69e9c093[m
+Author: Harshith Gudapati <jinnu95@gmail.com>
+Date:   Tue Apr 27 12:44:27 2021 -0500
+
+    changes by harshith
+
+[33mcommit 66fb1ec8d759d1925f6080ebb99aa35c9533af78[m
+Author: Mike Batani <mkbatani@gmail.com>
+Date:   Tue Apr 27 09:14:32 2021 -0700
+
+    conflict fix
+
+[33mcommit e7972ea00e6fa05f46bb39084862adcdc19087da[m
+Merge: 4f65b39 51149ea
+Author: Harshith Gudapati <jinnu95@gmail.com>
+Date:   Tue Apr 27 10:28:27 2021 -0500
+
+    Merge pull request #3 from tcs-mean-stack-group22/harshith2
+    
+    adding HEader
+
+[33mcommit 51149ea8b2e5e3918ff5753298e3226b9a449ebd[m
+Author: Harshith Gudapati <jinnu95@gmail.com>
+Date:   Tue Apr 27 10:26:53 2021 -0500
+
+    adding HEader
+
+[33mcommit 4f65b397ee88f56ced71b7264e14381368d08fbb[m
+Author: Harshith Gudapati <jinnu95@gmail.com>
+Date:   Tue Apr 27 10:25:34 2021 -0500
+
+    added footer
+
+[33mcommit 2f96640a7021fd5a513e3f5b0a26804a2438d8d9[m
+Merge: 83f44ad b734e7f
+Author: Avichel Verma <averma18@hawk.iit.edu>
+Date:   Tue Apr 27 09:36:51 2021 -0500
+
+    avichel branch merge
+
+[33mcommit b734e7fa61061ef007ab1613eeb3bcd5e36347cd[m
+Author: Avichel Verma <averma18@hawk.iit.edu>
+Date:   Tue Apr 27 00:59:46 2021 -0500
+
+    Added Admin Panel, with add,delete,update,view products
+
+[33mcommit 83f44ad4374feffa389636e088cf0b9bb7638674[m
+Author: Mike Batani <mkbatani@gmail.com>
+Date:   Mon Apr 26 19:58:28 2021 -0700
+
+    modified order.js
+
+[33mcommit 300116673410c394790527266071c2266e1b6886[m
+Author: Noah Zbinden <manoahz@gmail.com>
+Date:   Mon Apr 26 21:10:01 2021 -0500
+
+    Order.model+Ticket.model
+
+[33mcommit fafd63fc64e651d39aca862cb6f5e64f547a1274[m
+Author: Mike Batani <mkbatani@gmail.com>
+Date:   Mon Apr 26 18:14:20 2021 -0700
+
+    bux fixed on sign up and added edit user profile
+
+[33mcommit ca69de41ff483f88f528390988c5da1b2ca6f17e[m
+Author: Mike Batani <mkbatani@gmail.com>
+Date:   Mon Apr 26 15:40:54 2021 -0700
+
+    sign up pages was added with backend
+
+[33mcommit c8e31e467835fffc35d574ca3d2706cd99beacc0[m
+Author: Mike Batani <mkbatani@gmail.com>
+Date:   Mon Apr 26 13:50:10 2021 -0700
+
+    username and passowrd was added to sign up page
+
+[33mcommit 40da3144ca019ef3caa22c75d650a78448d32aaa[m
+Author: Mike Batani <mkbatani@gmail.com>
+Date:   Mon Apr 26 13:08:18 2021 -0700
+
+    bootstrap added and sign up page and backend
+
+[33mcommit a42f56371c6ed730f65520d7907aa9671956a182[m
+Author: Mike Batani <mkbatani@gmail.com>
+Date:   Mon Apr 26 11:43:36 2021 -0700
+
+    frontEnd
+
+[33mcommit 736e1adb76699460a97cd24f47bc51ed4cdb9f6e[m
+Author: Mike Batani <mkbatani@gmail.com>
+Date:   Mon Apr 26 11:23:35 2021 -0700
+
+    small fix on app.js
+
+[33mcommit a52d457670f8dfa2396f6e819c93b56c890fe0da[m
+Author: Mike Batani <mkbatani@gmail.com>
+Date:   Mon Apr 26 10:57:32 2021 -0700
+
+    added back backen functionality for request form for admin
+
+[33mcommit b723dead128de5fb68dda76a2d21232c78e08288[m
+Merge: 04e9984 2332e20
+Author: Avichel Verma <46980923+Avichelverma@users.noreply.github.com>
+Date:   Mon Apr 26 12:08:25 2021 -0500
+
+    Merge pull request #1 from tcs-mean-stack-group22/avichel
+    
+    CRUD operations for product
+
+[33mcommit 2332e20f691e38bc8a5ab222623b15fec23fe485[m
+Author: Avichel Verma <averma18@hawk.iit.edu>
+Date:   Mon Apr 26 12:00:23 2021 -0500
+
+    CRUD operations for product
+
+[33mcommit 04e9984347eae4846c02e4eec3e0f7f7e341ddf2[m
+Author: Mike Batani <mkbatani@gmail.com>
+Date:   Sun Apr 25 18:52:20 2021 -0700
+
+    html modified
+
+[33mcommit 5ebed3b38b806cbdd7fa67499cf692dcff95e0d0[m
+Author: Mike Batani <mkbatani@gmail.com>
+Date:   Sun Apr 25 18:50:03 2021 -0700
+
+    added more operation to requestForm for admin
+
+[33mcommit 0f3897ec052450e47ffb144db106cafcf6401cf9[m
+Author: Mike Batani <mkbatani@gmail.com>
+Date:   Sun Apr 25 15:20:04 2021 -0700
+
+    backEnd modified and Json package and node_module was added to backEnd
+
+[33mcommit dcf4ef65459fe7da1747e4112a30dfc7e5fd0a98[m
+Author: Mike Batani <mkbatani@gmail.com>
+Date:   Sun Apr 25 13:05:55 2021 -0700
+
+    backend was added and angular server.ts and formrequest was modified
+
+[33mcommit 6fbbad8c913887121dbe566dfadbb20b213ccb54[m
+Author: Mike Batani <mkbatani@gmail.com>
+Date:   Sun Apr 25 11:12:20 2021 -0700
+
+    replaced product.server.ts add formmodule and httpclient on app.module
+
+[33mcommit 1bd24502e185e7715d704980b86f85b11a7b333b[m
+Author: Mike Batani <mkbatani@gmail.com>
+Date:   Sun Apr 25 10:25:13 2021 -0700
+
+    angular json files were added
+
+[33mcommit 367a94996fcfa19bfa0bf445152b33ee77f24ebc[m
+Author: Mike Batani <mkbatani@gmail.com>
+Date:   Fri Apr 23 14:04:40 2021 -0700
+
+    back-end front-end with angular was added and .ignorefile was added
