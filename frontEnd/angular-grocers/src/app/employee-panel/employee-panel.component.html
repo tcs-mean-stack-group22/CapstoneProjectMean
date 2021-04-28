@@ -4,6 +4,7 @@
         <button class="btn btn-outline-primary"name="sentrequest" (click)='onSelectLink($event)'>Create/remove Order request</button>
         <button class="btn btn-outline-primary"name="lockuser" (click)='onSelectLink($event)'>Lock/Unlock User</button>
         <button class="btn btn-outline-primary"name="editProfile" (click)='onSelectLink($event)'>Edit Profile</button>
+        <button class="btn btn-outline-primary"name="updateOrderStatus" (click)='onSelectLink($event)'>Update Order Status</button>
 
     </div>
     <br><br>
@@ -13,9 +14,9 @@
             <app-send-request *ngSwitchCase="'sentrequest'"></app-send-request>
             <app-lock-user *ngSwitchCase="'lockuser'"></app-lock-user>
             <app-edit-profile *ngSwitchCase="'editProfile'"></app-edit-profile>
+            <app-update-order-status *ngSwitchCase="'updateOrderStatus'"></app-update-order-status>
 
-            <div *ngSwitchDefault>
-                
+            <div *ngSwitchDefault>  
             </div>
         </div>
     </div>

@@ -24,6 +24,7 @@ import { RaiseTicketComponent } from './raise-ticket/raise-ticket.component';
 import { UserPanelComponent } from './user-panel/user-panel.component';
 import { ViewProductCartComponent } from './view-product-cart/view-product-cart.component';
 import { EmployeePanelComponent } from './employee-panel/employee-panel.component';
+import { UpdateOrderStatusComponent } from './update-order-status/update-order-status.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { EmployeePanelComponent } from './employee-panel/employee-panel.componen
     RaiseTicketComponent,
     UserPanelComponent,
     ViewProductCartComponent,
-    EmployeePanelComponent
+    EmployeePanelComponent,
+    UpdateOrderStatusComponent
 
 
 	],

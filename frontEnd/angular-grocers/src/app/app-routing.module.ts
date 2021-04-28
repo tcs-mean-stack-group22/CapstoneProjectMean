@@ -23,7 +23,6 @@ const routes: Routes = [
 	{ path: 'lockuser', component: LockUserComponent },
 	{ path: 'orderstatus', component: OrderStatusComponent },
 	{ path: 'sendrequest', component: SendRequestComponent },
-	{ path: 'orderstatus', component: OrderStatusComponent },
 	{ path: 'editprofile', component: EditProfileComponent },
 	{ path: 'updateproduct', component: UpdateProductComponent },
 	{ path:  'sentrequest' ,component: SendRequestComponent },
