@@ -41,5 +41,9 @@ unlockUserAccount(ref:any)
   return this.http.put("http://localhost:9090/user/unlockUser" , ref , {responseType:'text'} )
 } 
 
+lockUserAccount(ref:any)
+{
+  return this.http.put("http://localhost:9090/user/lockUser" , ref , {responseType:'text'})
+}
 
 }
