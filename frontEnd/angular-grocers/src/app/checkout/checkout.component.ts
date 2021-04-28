@@ -47,18 +47,16 @@ export class CheckoutComponent implements OnInit {
   }
 
   buyCart(){
-    let user_id = localStorage.getItem("info")
-    let a; 
-    let b; 
+    let a = localStorage.getItem("info")
+    let array; 
+    let user_id; 
 
-    if(user_id != null){
-        a = JSON.parse(user_id)
-        b = a.userId
-        
+    if(a != null){
+        array = JSON.parse(a)
+        user_id = array.userId
     }
-    
-   
 
+    //OverWrite Local storage funds amount
     let info = localStorage.getItem("info")
     if(info != null){
       let infoArray = JSON.parse(info)
@@ -66,16 +64,16 @@ export class CheckoutComponent implements OnInit {
       localStorage.setItem("info", JSON.stringify(infoArray))
     }
 
-
-
     // Send Order to table
     let date: Date =  new Date();  
     let date2: Date =  new Date(); 
     date2.setDate(date.getDate()+7);
-    let model = new Order(b,date, date2,"Preparing to be Shipped",this.productList.length)
+    let model = new Order(user_id,date, date2,"Preparing to be Shipped",this.productList.length)
     this.orderService.updateOrders(model).subscribe((res) => {
       console.log(res)
     } )
+    
+    localStorage.setItem("cart", "")
   }
 
 }

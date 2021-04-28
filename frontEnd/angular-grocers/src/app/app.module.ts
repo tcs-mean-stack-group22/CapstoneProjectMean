@@ -23,6 +23,7 @@ import { FundsComponent } from './funds/funds.component';
 import { RaiseTicketComponent } from './raise-ticket/raise-ticket.component';
 import { UserPanelComponent } from './user-panel/user-panel.component';
 import { ViewProductCartComponent } from './view-product-cart/view-product-cart.component';
+import { EmployeePanelComponent } from './employee-panel/employee-panel.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { ViewProductCartComponent } from './view-product-cart/view-product-cart.
     FundsComponent,
     RaiseTicketComponent,
     UserPanelComponent,
-    ViewProductCartComponent
+    ViewProductCartComponent,
+    EmployeePanelComponent
 
 
 	],
