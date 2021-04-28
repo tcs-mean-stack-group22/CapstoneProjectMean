@@ -13,7 +13,7 @@ exports.postOrderDetails = (req,res) =>{
         
         date_Ordered:req.body.date_Ordered,
         date_Delivered:req.body.date_Delivered,
-        type:req.body.type,
+        status:req.body.status,
         number_Items:req.body.number_Items,
         user_id:req.body.user_id
     })
