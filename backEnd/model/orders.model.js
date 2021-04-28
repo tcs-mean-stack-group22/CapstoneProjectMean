@@ -3,9 +3,9 @@ mongoose.Promise = global.Promise;
 
 let OrderSchema = new mongoose.Schema({
     
-    date_Ordered:String, 
-    date_Delivered:String,
-    type:Number,
+    date_Ordered:Date, 
+    date_Delivered:Date,
+    status:Number,              // 0-for in house, 1 - en route, 2 Delivered to house
     number_Items:Number,
     user_id:Number
 })
