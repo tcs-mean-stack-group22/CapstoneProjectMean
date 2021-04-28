@@ -17,6 +17,12 @@ import { LockUserComponent } from './lock-user/lock-user.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { OrderStatusComponent } from './order-status/order-status.component';
+import { AddProductCartComponent } from './add-product-cart/add-product-cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { FundsComponent } from './funds/funds.component';
+import { RaiseTicketComponent } from './raise-ticket/raise-ticket.component';
+import { UserPanelComponent } from './user-panel/user-panel.component';
+import { ViewProductCartComponent } from './view-product-cart/view-product-cart.component';
 
 @NgModule({
 	declarations: [
@@ -35,7 +41,13 @@ import { OrderStatusComponent } from './order-status/order-status.component';
   NavbarComponent,
   FooterComponent,
 
-  OrderStatusComponent
+  OrderStatusComponent,
+    AddProductCartComponent,
+    CheckoutComponent,
+    FundsComponent,
+    RaiseTicketComponent,
+    UserPanelComponent,
+    ViewProductCartComponent
 
 	],
 	imports: [ BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, ReactiveFormsModule ],
