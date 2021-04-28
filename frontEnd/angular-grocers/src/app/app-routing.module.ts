@@ -30,7 +30,9 @@ const routes: Routes = [
 	{ path: 'raise-ticket', component: RaiseTicketComponent},
 	{ path: 'funds', component: FundsComponent},
 
-	{ path: '', redirectTo: 'adminpanel', pathMatch: 'full' }
+	{ path: '', redirectTo: 'adminpanel', pathMatch: 'full' } ,
+	{ path: '**', redirectTo: 'login', pathMatch: 'full' } 
+
 ];
 
 @NgModule({

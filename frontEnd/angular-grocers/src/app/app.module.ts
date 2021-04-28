@@ -24,6 +24,7 @@ import { RaiseTicketComponent } from './raise-ticket/raise-ticket.component';
 import { UserPanelComponent } from './user-panel/user-panel.component';
 import { ViewProductCartComponent } from './view-product-cart/view-product-cart.component';
 
+
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -48,6 +49,7 @@ import { ViewProductCartComponent } from './view-product-cart/view-product-cart.
     RaiseTicketComponent,
     UserPanelComponent,
     ViewProductCartComponent
+
 
 	],
 	imports: [ BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, ReactiveFormsModule ],
