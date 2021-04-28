@@ -11,6 +11,8 @@ export class SendRequestComponent implements OnInit {
 
   requestMsg:String = ""
 
+  Forms: any [] = [];
+
   constructor(public prodServ: ProductService) { }
 
   ngOnInit(): void {
@@ -29,6 +31,10 @@ export class SendRequestComponent implements OnInit {
     console.log("removeform" + ref.delName);
 
     this.prodServ.removeReqForm(ref.delName).subscribe((result:String) => this.delMsg = result)
+  }
+
+  getForm(){
+    //Empty function to help run HTML
   }
 
 }

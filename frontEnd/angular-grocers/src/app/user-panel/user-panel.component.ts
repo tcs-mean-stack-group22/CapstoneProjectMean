@@ -11,9 +11,6 @@ export class UserPanelComponent implements OnInit {
 
   ngOnInit(): void {
     localStorage.setItem("cart", "")
-    let infoArray: string[] = ["6088678463ae34129cea56d0"];
-
-    localStorage.setItem("info",JSON.stringify(infoArray) )
   }
 
   selectedTab: String = '';
