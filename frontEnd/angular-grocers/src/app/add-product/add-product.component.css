@@ -19,6 +19,7 @@
     display: flex;
     justify-items: center;
     justify-content: center;
+    overflow: auto;
     }   
  
 form{
@@ -28,6 +29,7 @@ form{
    align-items: center;
    min-width: 400px;
    padding: 40px;
+
 }
 .btn{
     margin:20px;
