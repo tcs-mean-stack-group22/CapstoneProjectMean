@@ -4,7 +4,10 @@ let cnt = 0 ;
 
 let createUser = (req,res) => {
    let cnt2 = cnt++ ;
+ 
    cnt2 = cnt2 + Math.floor(Math.random() * 10000)     
+
+
     productQ = new userModel({
          //Variables must match the schema in module 
 
@@ -18,7 +21,7 @@ let createUser = (req,res) => {
          phoneNum: req.body.phoneNum,
          address: req.body.address,
          type: req.body.type,
-         lock: req.body.lock,
+         lock: false,
          accountnumber: req.body.accountnumber,
          amountDeposit: req.body.amountDeposit
       })

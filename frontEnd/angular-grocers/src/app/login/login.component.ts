@@ -26,7 +26,7 @@ cnt:number = 1;
     subscribe(result => this.router.navigate(['/']));
     this.userServ.loginVertify(info).
     subscribe(result => console.log(result), error => { 
-      console.log(error) ;
+      //console.log(error) ;
       
       console.log(this.cnt)
       if (this.cnt == 3 )

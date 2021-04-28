@@ -12,9 +12,14 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  
+resultMsg:string = "";
   addUser(userInfo:any) {
-    //console.log(userInfo.firstname  + userInfo.lastname +   userInfo.email  )
+
+    userInfo.type = "user"
+
     this.userServ.storeUserInfo(userInfo). 
-    subscribe(result => console.log(result), error => console.log(error));
+    subscribe(result => {   this.resultMsg = result } , error => this.resultMsg ="Sign up failed, Please Try again");
   }
 }
