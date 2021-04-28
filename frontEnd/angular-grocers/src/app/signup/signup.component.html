@@ -1,3 +1,41 @@
+
+<div class="form-container">
+    <div class="body" style="align-items: center;">
+        <form #ngRef="ngForm" (ngSubmit)="addUser(ngRef.value)" style="padding: 45px;">
+            First Name : <br>
+            <input type="text" class="form-control" name="firstname" ngModel required> <br>
+            Last Name : <input type="text" class="form-control" name="lastname" ngModel required> <br>
+            Email : <input type="text" class="form-control" name="email" ngModel required> <br>
+            User Name : <input type="text" class="form-control" name="username" ngModel required> <br>
+            Password : <input type="text" class="form-control" name="password" ngModel required> <br>
+            Date of Birth : <input type="date" class="form-control" name="dob" ngModel required> <br>
+            Phone Number : <input type="number" class="form-control" name="phoneNum" ngModel required> <br>
+            Address : <input type="text" class="form-control" name="address" ngModel required> <br>
+            
+            Type:
+           
+            <div class="btn-group">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="true">
+                    User-Type
+                </button>
+                <div class="dropdown-menu-right  dropdown-menu-right">
+                    <button class="dropdown-item " type="button">End User</button>
+                    <button class="dropdown-item" type="button">Employee</button>
+                </div>
+            </div>
+           
+            Lock : <input type="text" class="form-control" name="lock" ngModel required> <br>
+            Account Number : <input type="number" class="form-control" name="accountnumber" ngModel required> <br>
+            Amount Deposit : <input type="number" class="form-control" name="amountDeposit" ngModel required> <br>
+            <div class="submit">
+            <input type="submit" class="col-4 btn btn-primary btn-sm float-right" style="margin-right: 80px;" value="Add Info">
+            <input type="reset"class="col-4 btn btn-secondary btn-sm float-left" value="Reset">
+        </div>
+        </form>
+       
+    </div>
+</div>
 <div>
     <form #ngRef="ngForm" (ngSubmit)= "addUser(ngRef.value)">
        First Name : <input type="text" name = "firstname" ngModel required> <br>
@@ -20,3 +58,4 @@
     </form>
 <br>
 {{resultMsg}}
+
