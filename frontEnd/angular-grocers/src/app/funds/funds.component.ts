@@ -9,6 +9,7 @@ import { UserService } from '../user.service';
 export class FundsComponent implements OnInit {
   resultMsg:String = "";
   funds:number = 0; 
+
   constructor(public userServ:UserService) { }
 
   ngOnInit(): void {
@@ -22,21 +23,17 @@ export class FundsComponent implements OnInit {
   addFunds(ref: any){
 
     ref.amountDeposit += this.funds; 
-
+    console.log("Total funds needed to be in account " + ref.amountDeposit + this.funds)
 
     this.userServ.updateUserAmountByAccNum(ref). 
     subscribe(result => console.log(result), error => console.log(error));
-
+    this.resultMsg = "Funds were Added to Account"
 
     let info = localStorage.getItem("info")
     if(info != null){
       let infoArray = JSON.parse(info)
-      infoArray.amountDeposit = this.funds + ref.amountDeposit;
+      infoArray.amountDeposit = ref.amountDeposit;
       localStorage.setItem("info", JSON.stringify(infoArray))
     }
-
-
-
   }
-
 }
