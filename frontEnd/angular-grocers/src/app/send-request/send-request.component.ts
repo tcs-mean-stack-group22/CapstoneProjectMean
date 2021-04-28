@@ -17,19 +17,18 @@ export class SendRequestComponent implements OnInit {
   }
   increaseProduct(ref:any)
   {
-    console.log(ref.pname)
-    console.log(ref.quanity)
+
     this.prodServ.storeProductReqForm(ref). 
     subscribe(result => console.log(result), error => console.log(error));
   }
-
+/* 
   Forms?:Array<RequestForm>;
   getForm()
   {
 
     console.log("getform")
     this.prodServ.getProductReqForm().subscribe(result => this.Forms=result)
-  }
+  } */
 
   delMsg:String = ""
   removeForm(ref:any)
