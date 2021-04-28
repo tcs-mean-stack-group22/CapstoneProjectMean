@@ -13,6 +13,7 @@ router.put("/editEmployee", userControler.storePass);
 router.get("/lockUser", userControler.retrieveAllLockedUserData);
 router.put("/unlockUser", userControler.updateUnlockUser);
 
+router.put("/lockUser", userControler.updateOnLockuserAccount);
 //router.post("/insert", productRequest.createRequestForm);
 /* 
 http://localhost:9090/user/login
