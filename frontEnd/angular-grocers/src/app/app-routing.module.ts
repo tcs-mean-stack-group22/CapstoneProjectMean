@@ -9,6 +9,7 @@ import { SendRequestComponent } from './send-request/send-request.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
 
+
 import { UserPanelComponent} from './user-panel/user-panel.component';
 import { RaiseTicketComponent} from './raise-ticket/raise-ticket.component';
 import { FundsComponent} from './funds/funds.component';
