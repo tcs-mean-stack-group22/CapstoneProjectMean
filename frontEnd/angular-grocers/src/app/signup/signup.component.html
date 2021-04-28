@@ -36,26 +36,7 @@
        
     </div>
 </div>
-<div>
-    <form #ngRef="ngForm" (ngSubmit)= "addUser(ngRef.value)">
-       First Name : <input type="text" name = "firstname" ngModel required> <br>
-       Last Name : <input type="text" name = "lastname" ngModel required> <br>
-       Email : <input type="text" name = "email" ngModel required> <br>
-       User Name : <input type="text" name = "username" ngModel required> <br>
-       Password : <input type="text" name = "password" ngModel required> <br>
-       Date of Birth : <input type="date" name = "dob" ngModel > <br>
-       Phone Number  : <input type="number" name = "phoneNum" ngModel > <br>
-       Address : <input type="text" name = "address" ngModel > <br>
-
-
-       Account Number : <input type="number" name = "accountnumber" ngModel > <br>
-        Amount Deposit : <input type="number" name = "amountDeposit" ngModel > <br>
-       <br> <br>
-      
-     
-       <input type="submit" value="Add Information">
-       <input type="reset" value="reset">
-    </form>
+<div>    
 <br>
 {{resultMsg}}
 
