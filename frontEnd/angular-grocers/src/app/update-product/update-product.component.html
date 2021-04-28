@@ -1,6 +1,6 @@
 <div class="form-container">
     <div class="body" style="align-items: center;">
-    <form style="max-width: 500px; align-items: center;" [formGroup]="productRef" (ngSubmit)="onUpdateProduct()">
+    <form  [formGroup]="productRef" (ngSubmit)="onUpdateProduct()">
         <div class="mb-3">
             <label for="name" class="form-label">Product Name</label>
             <input type="text" class="form-control" formControlName="name">
