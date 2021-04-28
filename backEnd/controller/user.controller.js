@@ -139,7 +139,26 @@ let updateOnLockuserAccount = (req, res) =>
     })
 }
 
+let updateUserAmountByAccNum = (req, res) => {
+	let amountDeposit= req.body.amountDeposit;
+	let accountNumber = req.body.accountNumber;
+	userModel.updateOne({accountnumber:accountNumber}, {$set:{amountDeposit:amountDeposit}}, (err, result) => {
+		if (!err) {
+			if (result.nModified > 0) {
+				return res.status(200).json({
+					message: 'Record updated successfully'
+				});
+			} else {
+				return res.status(500).json({
+					error: err,
+					message: 'Amount not updated'
+				});
+			}
+		}
+	});
+};
 
 
 
-module.exports = {createUser , retrieveDataFromUser , storePass, retrieveAllLockedUserData , updateUnlockUser , updateOnLockuserAccount} 
+
+module.exports = {createUser , retrieveDataFromUser , storePass, retrieveAllLockedUserData , updateUnlockUser , updateOnLockuserAccount, updateUserAmountByAccNum} 
