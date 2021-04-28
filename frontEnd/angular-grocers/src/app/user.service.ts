@@ -46,4 +46,9 @@ lockUserAccount(ref:any)
   return this.http.put("http://localhost:9090/user/lockUser" , ref , {responseType:'text'})
 }
 
+updateUserAmountByAccNum(ref:any)
+{
+    return this.http.put(`http://localhost:9090/user/updateUserAmount`, ref, );
+  }
+
 }

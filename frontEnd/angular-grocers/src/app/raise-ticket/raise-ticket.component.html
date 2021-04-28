@@ -1,0 +1,17 @@
+<div> 
+    <br/>
+    <h1> Submit a Ticket</h1>
+    <form #productRef = "ngForm" (ngSubmit) = "storeTicket(productRef.value)"> 
+        <label> First Name</label>
+        <input type = "text" name = "firstName" ngModel> <br/> 
+
+        <label> Last Name</label>
+        <input type = "text" name = "lastName" ngModel> <br/> 
+
+        <label> Message</label>
+        <input type = "text" name = "msg" ngModel> <br/> 
+
+        <input type = "submit" value= "Submit">
+        <input type = "reset" value="Reset" > <br/> 
+    </form>
+</div>

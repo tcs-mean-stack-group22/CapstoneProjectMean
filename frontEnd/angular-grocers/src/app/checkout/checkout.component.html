@@ -1,0 +1,27 @@
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Discount</th>
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let product of productList; let i = index">
+            <tr *ngFor = "let p of product" id={{p._id}}>
+                    <th>{{i+1}}</th>
+                    <td>{{p.name}}</td>
+                    <td>{{p.price}}</td>
+                    <td>{{p.discount}}</td>
+                    <td> {{p.discount * p.price}}</td>
+            </tr>
+        </tbody>
+    </table>
+     <h3>Total Cost : {{sum}} </h3>
+     <h3> Total Funds: {{amount}}</h3>
+     <button (click)="buyCart()">Purchase</button>
+     
+</div>
