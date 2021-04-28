@@ -5,7 +5,7 @@
         Amount to Add : <input type="number" name = "amountDeposit" ngModel required> <br>
         <br> <br>
        
-        <input type="submit" value="Log in">
+        <input type="submit" value="Log in"  (click)="ngRef.resetForm()">
         <input type="reset" value="reset">
      </form>
      {{resultMsg}}
