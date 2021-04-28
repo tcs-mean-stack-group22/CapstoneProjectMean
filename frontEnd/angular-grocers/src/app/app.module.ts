@@ -17,6 +17,8 @@ import { ViewRequestsComponent } from './view-requests/view-requests.component';
 import { LockUserComponent } from './lock-user/lock-user.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { OrderStatusComponent } from './order-status/order-status.component';
+
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -30,8 +32,12 @@ import { FooterComponent } from './footer/footer.component';
 		ViewProductsComponent,
 		ViewRequestsComponent ,
 		LockUserComponent,
+
   NavbarComponent,
-  FooterComponent
+  FooterComponent,
+
+  OrderStatusComponent
+
 	],
 	imports: [ BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, ReactiveFormsModule ],
 	providers: [],

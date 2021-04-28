@@ -19,7 +19,7 @@ export class SendRequestComponent implements OnInit {
   {
     console.log(ref.pname)
     console.log(ref.quanity)
-    this.prodServ.sotreProductReqForm(ref). 
+    this.prodServ.storeProductReqForm(ref). 
     subscribe(result => console.log(result), error => console.log(error));
   }
 
