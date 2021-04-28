@@ -1,40 +1,48 @@
 <div>
-    <h2>View the users whose account are locked</h2>
-    <table border = "1px">
-        <tr >
-            <th>User ID</th>
-            <th>user Name</th>
-            <th>First name</th>
-            <th>Last Name</th>
-            <th>Lock Status</th>
-        </tr>
-        <tbody >
+    <h2 style="text-align: center; margin: 50px;">View the users whose account are locked</h2>
+    <table class="table table-striped" style="padding: 4px;">
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>user Name</th>
+                <th>First name</th>
+                <th>Last Name</th>
+                <th>Lock Status</th>
+            </tr>
+        </thead>
+        <tbody>
 
-            <tr *ngFor = "let o of tmp" >
-            <td>{{o._id}}</td>
-            <td>{{o.username}}</td>
-            <td >{{o.firstname}}</td>
-            <td >{{o.lastname}}</td>
-            <td >{{o.lock}}</td>
+            <tr *ngFor="let o of tmp">
+                <td>{{o._id}}</td>
+                <td>{{o.username}}</td>
+                <td>{{o.firstname}}</td>
+                <td>{{o.lastname}}</td>
+                <td>{{o.lock}}</td>
 
-        </tr>
+            </tr>
         </tbody>
     </table>
-    
+
     <br>
-    <br>   
+    <br>
     <hr>
     <br>
     <br>
-
-    <h2>Remove lock user account</h2>
-    <form #ngRef="ngForm" (ngSubmit)= "unlockUser(ngRef.value)">
-        User Id : <input type="text" name = "userId" ngModel required> <br>
-        User Name : <input type="text" name = "userName" ngModel required> <br>
-        <br> <br>
-        <input type="submit" value="Unlock User">
-        <input type="reset" value="reset">
-     </form>
-
-     {{msg}}
+    <div class="container">
+        <div class="body" style="align-items: center;">
+    <h2 style="text-align: center;">Remove lock user account</h2>
+    <form #ngRef="ngForm" (ngSubmit)="unlockUser(ngRef.value)">
+        <label> User Id :</label> <br><br>
+        <input type="text"  class="form-control" name="userId" ngModel required> <br>
+        <label> User Name :</label> <br><br>
+        <input type="text"  class="form-control" name="userName" ngModel required> <br>
+       
+        <input type="submit"  class="col-4 btn btn-primary btn-sm float-right" value="Unlock User">
+        <input type="reset"  class="col-4 btn btn-secondary btn-sm float-left" value="reset">
+    </form>
+    {{msg}}
 </div>
+</div>
+  
+</div>
+
