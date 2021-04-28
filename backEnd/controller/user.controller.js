@@ -34,6 +34,7 @@ let createUser = (req,res) => {
 
 
   //the function will take username & password from user and return json first last name and type
+  //this used in login site 
     let retrieveDataFromUser = (req, res) => {
         let userN =  req.body.username
         let pass =  req.body.password
@@ -43,10 +44,13 @@ let createUser = (req,res) => {
             if(result != null)
             {
                     return res.status(200).json({
+                        
                         firstname : result.firstname ,
                         lastname : result.lastname ,
                         password : result.password ,
-                        type : result.type 
+                        amountDeposit : result.amountDeposit ,
+                        type : result.type ,
+                        userId : result._id 
                         
                     });
    
@@ -54,7 +58,7 @@ let createUser = (req,res) => {
             else {
                 return res.status(404).json({
                     error: err,
-                    message: 'Products not found'
+                    message: 'User not found'
                 });
             }
         })
