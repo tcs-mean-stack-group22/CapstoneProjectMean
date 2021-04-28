@@ -10,14 +10,14 @@ export class OrderStatusComponent implements OnInit {
 
   constructor(public orderService: OrderService) { }
   orderList:  any = [];
-  orderArray: string[] = [];
+  orderId: any = "";
 
   ngOnInit(): void {
     let user_id = localStorage.getItem("info")
     if(user_id != null){
-      this.orderArray = JSON.parse(user_id)
+      this.orderId = JSON.parse(user_id)
     }
-    this.searchDetails(this.orderArray[0])
+    this.searchDetails(this.orderId.userId)
 
   }
 
@@ -25,7 +25,6 @@ export class OrderStatusComponent implements OnInit {
     console.log("Id is "+id);
     this.orderService.retrieveOrderById(id).subscribe(result=> {
       this.orderList.push(result)
-      console.log("Order List " + this.orderList)
     });
   }
 

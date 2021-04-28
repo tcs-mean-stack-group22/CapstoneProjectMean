@@ -52,19 +52,21 @@ export class CheckoutComponent implements OnInit {
     let b; 
     if(user_id != null){
         a = JSON.parse(user_id)
-        b = a[0]
+        b = a.userId
     }
     
-
     let y = this.amount - this.sum;
     let date: Date =  new Date();  
     let date2: Date =  new Date(); 
     date2.setDate(date.getDate()+7);
+
+    
     let model = new Order(b,date, date2,"Preparing to be Shipped",this.productList.length )
 
     this.orderService.updateOrders(model).subscribe((res) => {
       console.log(res)
     } )
+  
   
     console.log("Funds will be update from Backend")
     console.log(this.productList.length)
