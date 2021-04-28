@@ -16,8 +16,9 @@ export class LockUserComponent implements OnInit {
   cnt:number = 0;
   ngOnInit(): void {
     this.userServ.getAllLockUser().subscribe(result=> 
-      {this.lockUserArray.push(JSON.stringify(result))
-        this.lockUserArray.push(result)
+      {
+        this.lockUserArray.push(JSON.stringify(result))
+   
         this.tmp =JSON.parse(this.lockUserArray[0]) 
       
       })

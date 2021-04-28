@@ -1,0 +1,27 @@
+
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Status</th>
+                <th scope="col">Date Ordered</th>
+                <th scope="col">Planned Delivered Date</th>
+                <th scope="col">Number of Items</th>
+                <th scope="col">User ID</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let order of orderList">
+            <tr *ngFor = "let p of order; let i = index">
+                    <th>{{i+1}}</th>
+                    <td>{{p.status}}</td>
+                    <td>{{p.date_Ordered}}</td>
+                    <td>{{p.date_Delivered}}</td>
+                    <td>{{p.number_Items}}</td>
+                    <td>{{p.user_id}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

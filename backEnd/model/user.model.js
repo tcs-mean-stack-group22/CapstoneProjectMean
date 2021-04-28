@@ -2,7 +2,6 @@ let  mongoose = require("mongoose");
 mongoose.Promise = global.Promise; 
 
 let UserSchema = new mongoose.Schema({
-    _id:Number,
     firstname:String, 
     lastname:String, 
     username:String, 

@@ -22,7 +22,7 @@ export class UserService {
 
   loginVertify(ref:any) 
   {
-    return this.http.post("http://localhost:9090/user/login" , ref )
+    return this.http.post("http://localhost:9090/user/login" , ref , {responseType : 'json'})
   }
 
   saveEmpPass(pass:any)
@@ -45,5 +45,10 @@ lockUserAccount(ref:any)
 {
   return this.http.put("http://localhost:9090/user/lockUser" , ref , {responseType:'text'})
 }
+
+updateUserAmountByAccNum(ref:any)
+{
+    return this.http.put(`http://localhost:9090/user/updateUserAmount`, ref, );
+  }
 
 }

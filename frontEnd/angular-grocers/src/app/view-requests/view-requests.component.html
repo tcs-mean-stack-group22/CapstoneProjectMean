@@ -1,1 +1,24 @@
-<p>view-requests works!</p>
+<div>
+    <h2 style="text-align: center; margin: 10px;">View the users whose account are locked</h2>
+    <table class="table table-striped" style="padding: 4px;">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Product Name</th>
+                <th>Product Quanity</th>
+         
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr *ngFor="let o of Forms">
+                <td>{{o._id}}</td>
+                <td>{{o.pname}}</td>
+                <td>{{o.quanity}}</td>
+    
+    
+            </tr>
+        </tbody>
+    </table>
+
+</div>

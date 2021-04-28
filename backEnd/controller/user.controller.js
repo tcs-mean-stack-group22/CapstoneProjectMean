@@ -1,17 +1,12 @@
 const UserModel = require("../model/user.model.js");
 let userModel = require("../model/user.model.js");
-let cnt = 0 ;
 
 let createUser = (req,res) => {
-   let cnt2 = cnt++ ;
- 
-   cnt2 = cnt2 + Math.floor(Math.random() * 10000)     
 
 
     productQ = new userModel({
          //Variables must match the schema in module 
 
-         _id :  cnt2,
          firstname: req.body.firstname,
          lastname: req.body.lastname ,
          username: req.body.username ,
@@ -39,6 +34,7 @@ let createUser = (req,res) => {
 
 
   //the function will take username & password from user and return json first last name and type
+  //this used in login site 
     let retrieveDataFromUser = (req, res) => {
         let userN =  req.body.username
         let pass =  req.body.password
@@ -48,10 +44,13 @@ let createUser = (req,res) => {
             if(result != null)
             {
                     return res.status(200).json({
+                        
                         firstname : result.firstname ,
                         lastname : result.lastname ,
                         password : result.password ,
-                        type : result.type 
+                        amountDeposit : result.amountDeposit ,
+                        type : result.type ,
+                        userId : result._id 
                         
                     });
    
@@ -59,7 +58,7 @@ let createUser = (req,res) => {
             else {
                 return res.status(404).json({
                     error: err,
-                    message: 'Products not found'
+                    message: 'User not found'
                 });
             }
         })
@@ -140,7 +139,26 @@ let updateOnLockuserAccount = (req, res) =>
     })
 }
 
+let updateUserAmountByAccNum = (req, res) => {
+	let amountDeposit= req.body.amountDeposit;
+	let accountNumber = req.body.accountNumber;
+	userModel.updateOne({accountnumber:accountNumber}, {$set:{amountDeposit:amountDeposit}}, (err, result) => {
+		if (!err) {
+			if (result.nModified > 0) {
+				return res.status(200).json({
+					message: 'Record updated successfully'
+				});
+			} else {
+				return res.status(500).json({
+					error: err,
+					message: 'Amount not updated'
+				});
+			}
+		}
+	});
+};
 
 
 
-module.exports = {createUser , retrieveDataFromUser , storePass, retrieveAllLockedUserData , updateUnlockUser , updateOnLockuserAccount} 
+
+module.exports = {createUser , retrieveDataFromUser , storePass, retrieveAllLockedUserData , updateUnlockUser , updateOnLockuserAccount, updateUserAmountByAccNum} 

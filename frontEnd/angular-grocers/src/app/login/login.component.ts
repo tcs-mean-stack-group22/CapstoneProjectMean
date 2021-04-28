@@ -20,12 +20,23 @@ resultMsg:string = "";
 cnt:number = 1;
 
 
+userArr:Array<any> = []
   login(info:any) 
   {
     this.userServ.loginVertify(info). 
     subscribe(result => this.router.navigate(['/']));
     this.userServ.loginVertify(info).
-    subscribe(result => console.log(result), error => { 
+    subscribe(result => 
+      {
+  
+
+        let tmp = JSON.parse(JSON.stringify(result))
+    
+        localStorage.setItem("info", tmp);
+  /*       console.log(tmp.userId)
+        console.log(tmp.firstname)  //undefined    */
+      
+      }, error => { 
       //console.log(error) ;
       
       console.log(this.cnt)
