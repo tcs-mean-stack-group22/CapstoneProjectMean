@@ -1,17 +1,12 @@
 const UserModel = require("../model/user.model.js");
 let userModel = require("../model/user.model.js");
-let cnt = 0 ;
 
 let createUser = (req,res) => {
-   let cnt2 = cnt++ ;
- 
-   cnt2 = cnt2 + Math.floor(Math.random() * 10000)     
 
 
     productQ = new userModel({
          //Variables must match the schema in module 
 
-         _id :  cnt2,
          firstname: req.body.firstname,
          lastname: req.body.lastname ,
          username: req.body.username ,
