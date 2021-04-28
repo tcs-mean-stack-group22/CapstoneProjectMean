@@ -27,8 +27,14 @@ export class CheckoutComponent implements OnInit {
       console.log("Element is : " + element)
       this.searchDetails((element))
     });
+  
 
-    this.amount = 100; 
+    let info = localStorage.getItem("info")
+    if(info != null){
+      let infoArray = JSON.parse(info)
+     this.amount = infoArray.amountDeposit;
+    }
+    
 
   }
   searchDetails(id:any){
