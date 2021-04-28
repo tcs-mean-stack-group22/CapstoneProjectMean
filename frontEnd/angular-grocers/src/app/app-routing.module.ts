@@ -7,6 +7,7 @@ import { LockUserComponent } from './lock-user/lock-user.component';
 import { OrderStatusComponent } from './order-status/order-status.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
+import { SendRequestComponent } from './send-request/send-request.component';
 
 const routes: Routes = [
 	{ path: 'login', component: LoginComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
 	{ path: 'orderstatus', component: OrderStatusComponent },
 	{ path: 'editprofile', component: EditProfileComponent },
 	{ path: 'updateproduct', component: UpdateProductComponent },
+	{ path:  'sentrequest' ,component: SendRequestComponent },
 	{ path: '', redirectTo: 'adminpanel', pathMatch: 'full' }
 ];
 
