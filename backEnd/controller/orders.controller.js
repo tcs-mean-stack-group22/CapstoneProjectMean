@@ -45,6 +45,25 @@ exports.postOrderDetails = (req,res) =>{
     })
 }
 
+exports.updateStatusById = (req, res) => {
+	let _id= req.body._id;
+	let status= req.body.status;
+	OrderModel.updateOne({_id:_id}, {$set:{status:status}}, (err, result) => {
+		if (!err) {
+			if (result.nModified > 0) {
+				return res.status(200).json({
+					message: 'Status updated successfully'
+				});
+			} else {
+				return res.status(500).json({
+					error: err,
+					message: 'Status not updated'
+				});
+			}
+		}
+	});
+};
+
 
 
 
