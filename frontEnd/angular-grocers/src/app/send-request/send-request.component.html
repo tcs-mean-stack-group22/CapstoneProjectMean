@@ -9,7 +9,8 @@
         Product quanity : <input type="number" name = "quanity" ngModel required>
         <br> <br>
         <input type="submit" value="Increase/Decrease product">
-        <input type="reset" value="reset">
+        <input type="reset" value="reset"> <br>
+        {{requestMsg }}
      </form>
             </div>
         </div>
@@ -26,6 +27,8 @@
                         Enter Name of the product to be deleted:  <input type="text" name="delName" ngModel required >
                         <input type="submit" value = "removeForm" >
                        </form> 
+                       <br>
+                       {{delMsg}}
                 </div>
             </div>
         </div>

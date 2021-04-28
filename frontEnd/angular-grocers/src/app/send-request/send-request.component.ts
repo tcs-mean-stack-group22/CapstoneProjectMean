@@ -21,7 +21,7 @@ export class SendRequestComponent implements OnInit {
   {
 
     this.prodServ.storeProductReqForm(ref). 
-    subscribe(result => console.log(result), error => console.log(error));
+    subscribe(result => this.requestMsg = result, error => this.requestMsg = " request failed, Please try again.");
   }
 
 
@@ -30,7 +30,7 @@ export class SendRequestComponent implements OnInit {
   {
     console.log("removeform" + ref.delName);
 
-    this.prodServ.removeReqForm(ref.delName).subscribe((result:String) => this.delMsg = result)
+    this.prodServ.removeReqForm(ref.delName).subscribe((result:String) => this.delMsg = result , err=> this.delMsg = "Error accured, PLease try again.")
   }
 
   getForm(){

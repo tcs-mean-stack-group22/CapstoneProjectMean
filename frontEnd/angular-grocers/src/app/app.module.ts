@@ -23,6 +23,7 @@ import { FundsComponent } from './funds/funds.component';
 import { RaiseTicketComponent } from './raise-ticket/raise-ticket.component';
 import { UserPanelComponent } from './user-panel/user-panel.component';
 import { ViewProductCartComponent } from './view-product-cart/view-product-cart.component';
+import { RemoveEmpComponent } from './remove-emp/remove-emp.component';
 
 @NgModule({
 	declarations: [
@@ -47,7 +48,8 @@ import { ViewProductCartComponent } from './view-product-cart/view-product-cart.
     FundsComponent,
     RaiseTicketComponent,
     UserPanelComponent,
-    ViewProductCartComponent
+    ViewProductCartComponent,
+    RemoveEmpComponent
 
 	],
 	imports: [ BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, ReactiveFormsModule ],

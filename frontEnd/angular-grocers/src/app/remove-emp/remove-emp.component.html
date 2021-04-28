@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="body" style="align-items: center;">
+        <div>
+            <h2>Remove employee by user ID or username</h2>
+            
+<form #ngRef="ngForm" (ngSubmit)= "removeEmp(ngRef.value)">
+    User Id : <input type="text" name = "userId" ngModel > <br>
+    User Name : <input type="textr" name = "userName" ngModel required>
+    <br> <br>
+    <input type="submit" value="Increase/Decrease product">
+    <input type="reset" value="reset">
+ </form>
+        </div>
+    </div>
+</div>

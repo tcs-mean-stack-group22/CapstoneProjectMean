@@ -12,6 +12,7 @@ import { UpdateProductComponent } from './update-product/update-product.componen
 import { UserPanelComponent} from './user-panel/user-panel.component';
 import { RaiseTicketComponent} from './raise-ticket/raise-ticket.component';
 import { FundsComponent} from './funds/funds.component';
+import { RemoveEmpComponent } from './remove-emp/remove-emp.component';
 
 const routes: Routes = [
 	{ path: 'login', component: LoginComponent },
@@ -30,7 +31,16 @@ const routes: Routes = [
 	{ path: 'raise-ticket', component: RaiseTicketComponent},
 	{ path: 'funds', component: FundsComponent},
 
-	{ path: '', redirectTo: 'adminpanel', pathMatch: 'full' }
+	{ path: '', redirectTo: 'adminpanel', pathMatch: 'full' },
+	
+	{ path: 'removeemp', component:RemoveEmpComponent  } ,
+	
+	
+	
+	
+	
+	{ path: '**', redirectTo: 'login', pathMatch: 'full' }
+	
 ];
 
 @NgModule({

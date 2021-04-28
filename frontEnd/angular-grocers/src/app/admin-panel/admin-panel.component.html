@@ -6,6 +6,8 @@
         <button class="btn btn-outline-primary"name="viewRequests" (click)='onSelectLink($event)'>View Order Requests</button>
         <button class="btn btn-outline-primary"name="sentrequest" (click)='onSelectLink($event)'>Create/remove Order request</button>
         <button class="btn btn-outline-primary"name="lockuser" (click)='onSelectLink($event)'>Lock/Unlock User</button>
+        <button class="btn btn-outline-primary"name="createemp" (click)='onSelectLink($event)'>Create Employee</button>
+        <button class="btn btn-outline-primary"name="removeemp" (click)='onSelectLink($event)'>Remove Employee</button>
 
     </div>
     <br><br>
@@ -16,6 +18,8 @@
             <app-view-requests *ngSwitchCase="'viewRequests'"></app-view-requests>
             <app-send-request *ngSwitchCase="'sentrequest'"></app-send-request>
             <app-lock-user *ngSwitchCase="'lockuser'"></app-lock-user>
+            <app-signup *ngSwitchCase="'createemp'"></app-signup>
+            <app-remove-emp *ngSwitchCase="'removeemp'"></app-remove-emp>
             <div *ngSwitchDefault>
                 
             </div>
