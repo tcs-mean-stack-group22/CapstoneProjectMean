@@ -8,7 +8,6 @@ import { OrderStatusComponent } from './order-status/order-status.component';
 import { SendRequestComponent } from './send-request/send-request.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
-import { SendRequestComponent } from './send-request/send-request.component';
 
 import { UserPanelComponent} from './user-panel/user-panel.component';
 import { RaiseTicketComponent} from './raise-ticket/raise-ticket.component';
