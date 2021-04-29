@@ -1,5 +1,5 @@
-<div>
-    <table class="table">
+<div class="output">
+    <table class="table table-striped" style="padding: 4px;">
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -18,7 +18,7 @@
                 <td>{{product.quantity}}</td>
                 <td>{{product.discount}}</td>
                 <td>
-                    <button (click)="addToCart(product._id)">Add</button>
+                    <button  class="brn btn-primary" (click)="addToCart(product._id)">Add</button>
                 </td>
             </tr>
         </tbody>
