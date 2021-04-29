@@ -26,6 +26,7 @@ import { ViewProductCartComponent } from './view-product-cart/view-product-cart.
 import { EmployeePanelComponent } from './employee-panel/employee-panel.component';
 import { UpdateOrderStatusComponent } from './update-order-status/update-order-status.component';
 import { EditProfileUserComponent } from './edit-profile-user/edit-profile-user.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -54,9 +55,9 @@ import { EditProfileUserComponent } from './edit-profile-user/edit-profile-user.
     ViewProductCartComponent,
     EmployeePanelComponent,
     UpdateOrderStatusComponent,
-    EditProfileUserComponent
-
-
+    EditProfileUserComponent,
+    HomeComponent, 
+	
 	],
 	imports: [ BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, ReactiveFormsModule ],
 	providers: [],

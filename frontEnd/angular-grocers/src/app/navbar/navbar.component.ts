@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -11,7 +12,7 @@ export class NavbarComponent implements OnInit {
   isAdmin: boolean = false; 
   isEmployee: boolean = false; 
   
-  constructor() { }
+  constructor(private router: Router) { }
    isOpen : boolean = false;
    toggleNavBar(){
      this.isOpen= !this.isOpen;
@@ -36,29 +37,10 @@ export class NavbarComponent implements OnInit {
        this.isEmployee = true; 
      }
     }
-
-    // this.as.user.subscribe((user)=>
-    //   {
-    //     if(user)
-    //     {
-    //     this.isUser = true;
-    //     console.log(this.isUser);
-    //     this.as.userId = user.uid
-        
-    //   }
-    //   else {
-    //     this.isUser = false;
-    //     console.log(this.isUser); 
-    //     this.as.userId = ''
-    //   }
-
-      
-    // })
-      
   }
   logout(){
     localStorage.clear();
-    
+    this.router.navigate([ '/login' ])
+    window.location.reload();
   }
-
 }
