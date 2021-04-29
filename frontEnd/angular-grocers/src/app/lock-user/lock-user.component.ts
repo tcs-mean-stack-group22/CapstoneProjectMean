@@ -28,7 +28,7 @@ export class LockUserComponent implements OnInit {
       this.ticketService.retrieveTicketDetails().subscribe(result => {
         console.log(result)
         this.messageList = result; 
-        console.log(this.messageList[0].firstName)
+        console.log(this.messageList[0])
       })
  
   }
@@ -42,5 +42,8 @@ export class LockUserComponent implements OnInit {
       this.msg = "account status did not get updated."
      
       } )
+
+  
+
   }
 }
