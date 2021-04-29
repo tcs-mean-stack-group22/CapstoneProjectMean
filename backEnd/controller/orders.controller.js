@@ -8,8 +8,24 @@ exports.getOrderDetails =(req,res)=> {
     })
 }
 
+exports.getOrderDetailsByItemId = (req,res) => {
+    let _id = req.params._id;
+    console.log(_id);
+	OrderModel.find({ _id:_id }, (err, data) => {
+		if (!err) {
+			return res.status(200).json(data);
+		} else {
+			return res.status(404).json({
+				error: err,
+				message: 'Order will not be found'
+			});
+		}
+	});
+}
+
 exports.getOrderDetailsById = (req,res) => {
     let user_id = req.params.user_id;
+    
 	OrderModel.find({ user_id: user_id }, (err, data) => {
 		if (!err) {
 			return res.status(200).json(data);

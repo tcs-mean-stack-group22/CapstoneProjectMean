@@ -34,7 +34,6 @@ export class EditProfileComponent implements OnInit {
     {
       this.resultMsg = "Password does not match"
     }
-    
   }
   savePassword(info:any)
   {
