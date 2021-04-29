@@ -161,4 +161,6 @@ let updateUserAmountByAccNum = (req, res) => {
 
 
 
+
+
 module.exports = {createUser , retrieveDataFromUser , storePass, retrieveAllLockedUserData , updateUnlockUser , updateOnLockuserAccount, updateUserAmountByAccNum} 

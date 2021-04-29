@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="body" style="align-items: center;">
+        <h2 class="text-center" style="margin:40px;">Edit Profile</h2>
+        <div>
+            <form #ngRef="ngForm" (ngSubmit)="changeInfo(ngRef.value)">
+                UserName : <input type="text" class="form-control" name="username" ngModel required> <br>
+                Address : <input type="text" class="form-control" name="address" ngModel required> <br>
+                New Password : <input type="text" class="form-control" name="password" ngModel required> <br>
+                Phone Number : <input type="text" class="form-control" name="phoneNum" ngModel required> <br>
+                Email : <input type="text" class="form-control" name="email" ngModel required> <br>
+
+                <input type="submit"  class="col-4 btn btn-primary btn-sm float-left" value="Change Info">
+                <input type="reset"  class="col-4 btn btn-secondary btn-sm float-right" value="Reset">
+            </form>
+            {{resultMsg}}
+        </div>
+    </div>
+    </div>
