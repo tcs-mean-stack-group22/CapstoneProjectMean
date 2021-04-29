@@ -1,11 +1,16 @@
 <div class="main-container container-fluid">
     <div class='links-container mb-3'>
-        <button class="btn btn-outline-primary" name="viewProducts" (click)='onSelectLink($event)'>View Products</button>
-        <button class="btn btn-outline-primary"name="addProduct" (click)='onSelectLink($event)'>Add Product</button>
+        <button class="btn btn-outline-primary" name="viewProducts" (click)='onSelectLink($event)'>View
+            Products</button>
+        <button class="btn btn-outline-primary" name="addProduct" (click)='onSelectLink($event)'>Add Product</button>
 
-        <button class="btn btn-outline-primary"name="viewRequests" (click)='onSelectLink($event)'>View Order Requests</button>
-        <button class="btn btn-outline-primary"name="sentrequest" (click)='onSelectLink($event)'>Create/remove Order request</button>
-        <button class="btn btn-outline-primary"name="lockuser" (click)='onSelectLink($event)'>Lock/Unlock User</button>
+        <button class="btn btn-outline-primary" name="viewRequests" (click)='onSelectLink($event)'>View Order
+            Requests</button>
+        <button class="btn btn-outline-primary" name="generateReports" (click)='onSelectLink($event)'>Generate
+            Reports</button>
+        <button class="btn btn-outline-primary" name="sentrequest" (click)='onSelectLink($event)'>Create/remove Order
+            request</button>
+        <button class="btn btn-outline-primary" name="lockuser" (click)='onSelectLink($event)'>Lock/Unlock User</button>
 
     </div>
     <br><br>
@@ -15,9 +20,10 @@
             <app-view-products *ngSwitchCase="'viewProducts'"></app-view-products>
             <app-view-requests *ngSwitchCase="'viewRequests'"></app-view-requests>
             <app-send-request *ngSwitchCase="'sentrequest'"></app-send-request>
+            <app-generate-reports *ngSwitchCase="'generateReports'"></app-generate-reports>
             <app-lock-user *ngSwitchCase="'lockuser'"></app-lock-user>
             <div *ngSwitchDefault>
-                
+
             </div>
         </div>
     </div>
