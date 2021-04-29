@@ -29,7 +29,5 @@ export class EditProfileUserComponent implements OnInit {
     this.userServ.updateUserInfoById(ref)
     .subscribe(result => console.log(result), error => console.log(error));
     this.resultMsg = "Information was Stored";
-
   }
-
 }
