@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -11,18 +12,21 @@ export class NavbarComponent implements OnInit {
   isAdmin: boolean = false; 
   isEmployee: boolean = false; 
   
-  constructor() { }
+  constructor(private router: Router) { }
    isOpen : boolean = false;
    toggleNavBar(){
-     this.isOpen= !this.isOpen;
+     this.isOpen= true;
    }
   ngOnInit(){
     let type = "";
     let info = localStorage.getItem("info")
     
     if(info != undefined){
-      let infoArray = JSON.parse(JSON.stringify(info))
-     type = infoArray.type;
+      console.log(info)
+      let infoArray = JSON.parse(info)
+      console.log(infoArray)
+      type = infoArray.type;
+     console.log(type)
      if(type == "user"){
        this.isUser = true; 
        this.isAdmin = false;
@@ -37,29 +41,9 @@ export class NavbarComponent implements OnInit {
        this.isEmployee = true; 
      }
     }
-
-    // this.as.user.subscribe((user)=>
-    //   {
-    //     if(user)
-    //     {
-    //     this.isUser = true;
-    //     console.log(this.isUser);
-    //     this.as.userId = user.uid
-        
-    //   }
-    //   else {
-    //     this.isUser = false;
-    //     console.log(this.isUser); 
-    //     this.as.userId = ''
-    //   }
-
-      
-    // })
-      
   }
   logout(){
     localStorage.clear();
-    
+    this.router.navigate([ '/login' ])
   }
-
 }

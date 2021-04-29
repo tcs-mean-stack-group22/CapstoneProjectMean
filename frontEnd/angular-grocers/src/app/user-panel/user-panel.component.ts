@@ -10,7 +10,7 @@ export class UserPanelComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    localStorage.setItem("cart", "")
+    //localStorage.setItem("cart", "")
   }
 
   selectedTab: String = '';
