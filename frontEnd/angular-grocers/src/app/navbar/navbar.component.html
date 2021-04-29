@@ -13,20 +13,35 @@
                 </li>
 
                 <!-- Admin Panels only-->
+
+                <li *ngIf = "isAdmin" class="nav-item"> 
+                    <a class="nav-item nav-link" routerLink="/addproduct" routerLinkActive="Active" style="margin-left: 50px;"
+                        >Add Product</a>
+                </li>
                 
                 <li *ngIf = "isAdmin" class="nav-item"> 
                     <a class="nav-item nav-link" routerLink="/viewproduct" routerLinkActive="Active" style="margin-left: 50px;"
-                        >View Product</a>
-                </li>
-
-                <li *ngIf = "isAdmin" class="nav-item">
-                    <a class="nav-item nav-link" routerLink="/updateproduct" routerLinkActive="Active" style="margin-left: 50px;"
-                        >Update Product</a>
+                        >View Products</a>
                 </li>
 
                 <li *ngIf = "isAdmin" class="nav-item">
                     <a class="nav-item nav-link" routerLink="/viewrequest" routerLinkActive="Active" style="margin-left: 50px;"
                         >View Product Requests</a>
+                </li>
+
+                <li *ngIf = "isAdmin" class="nav-item">
+                    <a class="nav-item nav-link" routerLink="/lockuser" routerLinkActive="Active" style="margin-left: 50px;"
+                        >Unlock User</a>
+                </li>
+
+                <li *ngIf = "isAdmin" class="nav-item">
+                    <a class="nav-item nav-link" routerLink="/signup" routerLinkActive="Active" style="margin-left: 50px;"
+                        >Create Employee</a>
+                </li>
+
+                <li *ngIf = "isAdmin" class="nav-item">
+                    <a class="nav-item nav-link" routerLink="/removeemp" routerLinkActive="Active" style="margin-left: 50px;"
+                        >Remove Employee</a>
                 </li>
 
 

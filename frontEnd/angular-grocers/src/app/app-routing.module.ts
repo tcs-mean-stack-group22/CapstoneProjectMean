@@ -20,17 +20,23 @@ import { RaiseTicketComponent } from './raise-ticket/raise-ticket.component';
 import { FundsComponent } from './funds/funds.component';
 import { RemoveEmpComponent } from './remove-emp/remove-emp.component';
 import { EmployeePanelComponent } from './employee-panel/employee-panel.component';
+import { AddProductComponent} from './add-product/add-product.component';
+
 const routes: Routes = [
 	{ path: 'login', component: LoginComponent },
 	{ path: 'signup', component: SignupComponent },
 	{ path: 'adminpanel', component: AdminPanelComponent },
-	{ path: 'lockuser', component: LockUserComponent },
+	
 	{ path: 'sendrequest', component: SendRequestComponent },
 	{ path: 'editprofile', component: EditProfileComponent },
 	{ path: 'updateproduct', component: UpdateProductComponent },
 	//Admin Paths
 	{ path: 'viewproduct', component: ViewProductsComponent },
 	{ path: 'viewrequest', component: ViewRequestsComponent },
+	{ path: 'lockuser', component: LockUserComponent },
+	{ path: 'removeemp', component: RemoveEmpComponent },
+	{ path: 'addproduct', component: AddProductComponent},
+
 	//User Only Paths 
 	{ path: 'addtocart', component: AddProductCartComponent },
 	{ path: 'viewcart', component: ViewProductCartComponent },
@@ -48,8 +54,8 @@ const routes: Routes = [
 	{ path: 'user-panel', component: UserPanelComponent },
 	{ path: 'raise-ticket', component: RaiseTicketComponent },
 	{ path: 'funds', component: FundsComponent },
-	{ path: 'removeemp', component: RemoveEmpComponent },
-	{ path: 'employee-panel', component: EmployeePanelComponent },
+	
+	{ path: 'employeepanel', component: EmployeePanelComponent },
 	{ path: '', redirectTo: 'login', pathMatch: 'full' },
 	{ path: '**', redirectTo: 'login', pathMatch: 'full' }
 ];

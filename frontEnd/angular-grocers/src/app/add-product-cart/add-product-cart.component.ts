@@ -28,7 +28,6 @@ export class AddProductCartComponent implements OnInit {
         console.log(this.cartArray)
       }
     }
-    
   }
 
 
