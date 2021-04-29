@@ -3,7 +3,6 @@
     <a class="nav-link" href="http://localhost:4200/login">Login</a>
     <a class="nav-link" href="http://localhost:4200/editprofile">Edit profile</a>
 </nav>
-
 <div class="form-container">
     <form #ngRef="ngForm" (ngSubmit)="addUser(ngRef.value)">
         First Name : <input type="text" name="firstname" class="form-control form-control-sm" ngModel required>
@@ -17,23 +16,19 @@
         Account Number : <input type="number" class="form-control form-control-sm" name="accountnumber" ngModel>
         Amount Deposit : <input type="number" class="form-control form-control-sm" name="amountDeposit" ngModel>
         <div class="btn-group">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            <button type="button" class="btn btn-secondary dropright-toggle" data-toggle="dropright" aria-haspopup="true"
                 aria-expanded="true">
                 User-Type
             </button>
-            <div class="dropdown-menu-right  dropdown-menu-right">
-                <button class="dropdown-item " type="button" (click)="getValue('user')">End User</button>
+            <div class="dropright-menu-right  dropright-menu-right">
+                <button class="dropdown-item " type="button" (click)="getValue('user')" style="  margin-top:20px;">End User</button>
                 <button class="dropdown-item" type="button" (click)="getValue('emp')">Employee</button>
-
-    
-    
- 
             </div>
         </div>
         <div class="submit">
-        <input type="submit" class="col-4 btn btn-primary btn-sm float-left" value="Add Info">
-        <input type="reset" class="col-4 btn btn-secondary btn-sm float-right" value="Reset">
-       </div>
+            <input type="submit" class="col-4 btn btn-primary btn-sm float-left" value="Add Info">
+            <input type="reset" class="col-4 btn btn-secondary btn-sm float-right" value="Reset">
+        </div>
         {{resultMsg}}
     </form>
 </div>

@@ -24,7 +24,7 @@ form{
 .btn{
     
     display: inline;
-    margin: 20px 0 50px 0 ;
+    margin: 25px 0 10px 0 ;
     justify-content: center;
     align-items: center;
     width:200px;
@@ -34,3 +34,5 @@ form{
 .submit{
     margin-bottom: 200px;
 }
+
+
