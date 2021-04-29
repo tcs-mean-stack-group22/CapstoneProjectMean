@@ -15,15 +15,18 @@ export class NavbarComponent implements OnInit {
   constructor(private router: Router) { }
    isOpen : boolean = false;
    toggleNavBar(){
-     this.isOpen= !this.isOpen;
+     this.isOpen= true;
    }
   ngOnInit(){
     let type = "";
     let info = localStorage.getItem("info")
     
     if(info != undefined){
-      let infoArray = JSON.parse(JSON.stringify(info))
-     type = infoArray.type;
+      console.log(info)
+      let infoArray = JSON.parse(info)
+      console.log(infoArray)
+      type = infoArray.type;
+     console.log(type)
      if(type == "user"){
        this.isUser = true; 
        this.isAdmin = false;
@@ -42,6 +45,5 @@ export class NavbarComponent implements OnInit {
   logout(){
     localStorage.clear();
     this.router.navigate([ '/login' ])
-    window.location.reload();
   }
 }
