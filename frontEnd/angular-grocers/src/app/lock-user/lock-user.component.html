@@ -23,6 +23,28 @@
         </tbody>
     </table>
 
+    <div class="output">
+        <table class="table table-striped" style="padding: 4px;">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Message</th>
+           
+                </tr>
+            </thead>
+            <tbody *ngFor="let message of messageList; let i = index" class="active-row">
+                    <tr class="active-row">
+                        <th>{{i+1}}</th>
+                        <td>{{message.firstName}}</td>
+                        <td>{{message.lastName}}</td>
+                        <td>{{message.msg}}</td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+
     <br>
     <br>
     <hr>

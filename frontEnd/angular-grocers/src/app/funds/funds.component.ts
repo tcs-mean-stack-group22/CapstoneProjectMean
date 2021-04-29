@@ -35,5 +35,6 @@ export class FundsComponent implements OnInit {
       infoArray.amountDeposit = ref.amountDeposit;
       localStorage.setItem("info", JSON.stringify(infoArray))
     }
+    window.location.reload()
   }
 }

@@ -23,7 +23,7 @@ export class EmployeePanelComponent implements OnInit {
 		// Current Time //
 		var now = Date.now();
 		// Total Process Lenght as Minutes //
-		var tenSec = 10 * 1000;
+		var tenSec = 3 * 1000;
 		// End Time of Process //
 		var plusTenSec = currentDocumentTimestamp + tenSec;
 		if (now > plusTenSec) {
