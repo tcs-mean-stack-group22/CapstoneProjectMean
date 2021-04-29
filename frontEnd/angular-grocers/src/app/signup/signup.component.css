@@ -11,7 +11,7 @@ form{
    justify-content: center;
    align-items: center;
    min-width: 400px;
-   padding: 45px;
+   padding: 40px;
 }
 
 .btn-group {
@@ -22,16 +22,14 @@ form{
 .btn{
     
     display: inline;
-    padding: 8px;
+
     justify-content: center;
     align-items: center;
     width: 100px;
-    height: 50px;
- 
-  
+    height: 50px; 
      
 }
 .submit{
-    margin-bottom:100px;
-    padding: auto;
+    margin:10px 20px 150px 30px;
+   
 }

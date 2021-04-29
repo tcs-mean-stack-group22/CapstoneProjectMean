@@ -1,15 +1,18 @@
-<div>
-    <h2>Add Funds</h2>
-    <form #ngRef="ngForm" (ngSubmit)= "addFunds(ngRef.value)">
-        User Account Number : <input type="number" name = "accountNumber" ngModel required> <br>
-        Amount to Add : <input type="number" name = "amountDeposit" ngModel required> <br>
-        <br> <br>
-        <h3> Total Funds : {{funds}}</h3>
-       
 
-        <input type="submit" value="Add Funds">
-        <input type="reset" value="Reset">
+<div class="container">
+    <div class="body" style="align-items: center;">
+        <h2 class="text-center" style="margin:40px;">Add Funds</h2>
+        <div>
+            <form #ngRef="ngForm" (ngSubmit)="addFunds(ngRef.value)">
+                User Account Number : <input type="number" class="form-control" name="accountNumber" ngModel required> <br>
+                Amount to Add : <input type="number"  class="form-control" name="amountDeposit" ngModel required> <br>
+            
+                <h3 class="text-center" style="margin:40px;"> Total Funds : {{funds}}</h3>
 
-     </form>
-     {{resultMsg}}
+                <input type="submit" class="col-4 btn btn-primary btn-sm float-left" value="Add Funds">
+                <input type="reset" class="col-4 btn btn-secondary btn-sm float-right" value="Reset">
+            </form>
+            <h6  style= "margin:10px 0px 100px 0px;"> {{resultMsg}} </h6>
+        </div>
+    </div>
 </div>
