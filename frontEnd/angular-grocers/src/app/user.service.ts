@@ -51,4 +51,8 @@ updateUserAmountByAccNum(ref:any)
     return this.http.put(`http://localhost:9090/user/updateUserAmount`, ref, );
   }
 
+updateUserInfoById(ref:any)
+{
+    return this.http.put(`http://localhost:9090/user/updateUserInfo`, ref, );
+  }
 }
