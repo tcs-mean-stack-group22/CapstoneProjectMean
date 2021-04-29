@@ -7,35 +7,84 @@
      
         <div class="collapse navbar-collapse" [class.show] ="isOpen" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-item nav-link" routerLink="/adminpanel">Home <span class="sr-only">(current)</span></a>
+
+
+
+                <li *ngIf = "isAdmin" class="nav-item"> 
+                    <a class="nav-item nav-link" routerLink="/adminpanel" routerLinkActive="Active" style="margin-left: 50px;"
+                        >Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-item nav-link" routerLink="/userpanel">User Panel<span class="sr-only">(current)</span></a>
-                </li>
+
+                <!-- Admin Panles only-->
                 
-                <li class="nav-item">
+                <li *ngIf = "isAdmin" class="nav-item"> 
+                    <a class="nav-item nav-link" routerLink="/viewproduct" routerLinkActive="Active" style="margin-left: 50px;"
+                        >View Product</a>
+                </li>
+
+                <li *ngIf = "isAdmin" class="nav-item">
                     <a class="nav-item nav-link" routerLink="/updateproduct" routerLinkActive="Active" style="margin-left: 50px;"
                         >Update Product</a>
                 </li>
-                <li class="nav-item">
+
+                <li *ngIf = "isAdmin" class="nav-item">
+                    <a class="nav-item nav-link" routerLink="/viewrequest" routerLinkActive="Active" style="margin-left: 50px;"
+                        >View Product Requests</a>
+                </li>
+
+
+
+                <!-- User Only Panles-->
+                <li *ngIf = "isUser" class="nav-item">
+                    <a class="nav-item nav-link" routerLink="/addtocart" routerLinkActive="Active" style="margin-left: 50px;"
+                        >Add To Cart</a>
+                </li>
+
+                <li *ngIf = "isUser" class="nav-item">
+                    <a class="nav-item nav-link" routerLink="/viewcart" routerLinkActive="Active" style="margin-left: 50px;"
+                        >View Cart</a>
+                </li>
+
+                <li *ngIf = "isUser" class="nav-item">
+                    <a class="nav-item nav-link" routerLink="/checkout" routerLinkActive="Active" style="margin-left: 50px;"
+                        >Checkout</a>
+                </li>
+
+                <li *ngIf = "isUser" class="nav-item">
+                    <a class="nav-item nav-link" routerLink="/orderstatus" routerLinkActive="Active" style="margin-left: 50px;"
+                        >Order Status</a>
+                </li>
+
+                <li *ngIf = "isUser" class="nav-item">
+                    <a class="nav-item nav-link" routerLink="/editprofileuser" routerLinkActive="Active" style="margin-left: 50px;"
+                        >Edit Profile</a>
+                </li>
+
+                <li *ngIf = "isUser" class="nav-item">
+                    <a class="nav-item nav-link" routerLink="/funds" routerLinkActive="Active" style="margin-left: 50px;"
+                        > Add Funds</a>
+                </li>
+
+
+
+
+
+
+
+
+                <!--Employe Panels Only-->
+                <li *ngIf = "isEmployee" class="nav-item">
                     <a class="nav-item nav-link" routerLink="/lockuser" routerLinkActive="Active" style="margin-left: 50px;"
                         >Lock User</a>
                 </li>
-                <li class="nav-item">
+                <li *ngIf = "isEmployee" class="nav-item">
                     <a class="nav-item nav-link" routerLink="/editprofile" routerLinkActive="Active" style="margin-left: 50px;"
                         >Edit Profile</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-item nav-link" routerLink="/sendrequest" routerLinkActive="Active" style="margin-left: 50px;"
+                <li *ngIf = "isEmployee" class="nav-item">
+                    <a *ngIf = "" class="nav-item nav-link" routerLink="/sendrequest" routerLinkActive="Active" style="margin-left: 50px;"
                         >Send Request</a>
                 </li>
-                
-                <li class="nav-item">
-                    <a class="nav-item nav-link" routerLink="/signup" routerLinkActive="Active"
-                        style="margin-left: 50px;" >SignUp</a>
-                </li>
-               
                 
                 <li class="nav-item">
                     <a class="nav-item nav-link" routerLink="/login" routerLinkActive="Active"
