@@ -31,15 +31,17 @@ mongoose.connection;
 let productRequest = require('./router/productRequest.router.js');
 let productRoutes = require('./router/product.router.js');
 let userRoutes = require('./router/user.router.js');
-let ticketRoutes = require('./router/ticket.router.js')
-let orderRoutes = require('./router/order.router.js')
+let ticketRoutes = require('./router/ticket.router.js');
+let orderRoutes = require('./router/order.router.js');
+let reportRoutes = require('./router/reports.router');
 //than send the flow to product router.js if the link is :  http://localhost:9090/product/...
 
 app.use('/product', productRoutes);
 app.use('/productrequest', productRequest);
-app.use('/user',userRoutes );
-app.use('/ticket',ticketRoutes);
-app.use('/order',orderRoutes)
+app.use('/user', userRoutes);
+app.use('/ticket', ticketRoutes);
+app.use('/order', orderRoutes);
+app.use('/report', reportRoutes);
 
 // Next
 
