@@ -24,7 +24,7 @@ userArr:Array<any> = []
   login(info:any) 
   {
     this.userServ.loginVertify(info). 
-    subscribe(result => this.router.navigate(['/']));
+    subscribe(result => this.router.navigate(['/adminpanel']));
     this.userServ.loginVertify(info).
     subscribe(result => 
       {
@@ -33,11 +33,10 @@ userArr:Array<any> = []
         let tmp = JSON.stringify(result)
     
         localStorage.setItem("info", tmp);
-  /*       console.log(tmp.userId)
-        console.log(tmp.firstname)  //undefined    */
+
       
       }, error => { 
-      //console.log(error) ;
+      console.log(error) ;
       
       console.log(this.cnt)
       if (this.cnt == 3 )
@@ -49,9 +48,10 @@ userArr:Array<any> = []
       
       else if (this.cnt < 3)
       {
-   
+      
         this.resultMsg = "Username/password did not match, Please try again. Try:  " + this.cnt;
         this.cnt++;
+     
       }
       else
       {

@@ -1,0 +1,29 @@
+
+   .container{
+    display: flex;
+justify-items: center;
+justify-content: center;
+}
+
+form{
+    display: block;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    min-width: 400px;
+    padding: 40px;
+ }
+ .remove{
+
+    min-width: 550px;
+    padding: 40px;
+ }
+
+.btn{
+margin:10px 0px 100px 0px;
+display: inline;
+padding: 8px;
+justify-content: center;
+align-items: center; 
+}
+

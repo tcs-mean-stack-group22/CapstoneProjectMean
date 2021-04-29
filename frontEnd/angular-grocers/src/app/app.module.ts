@@ -23,10 +23,14 @@ import { FundsComponent } from './funds/funds.component';
 import { RaiseTicketComponent } from './raise-ticket/raise-ticket.component';
 import { UserPanelComponent } from './user-panel/user-panel.component';
 import { ViewProductCartComponent } from './view-product-cart/view-product-cart.component';
+
+import { RemoveEmpComponent } from './remove-emp/remove-emp.component';
+
 import { EmployeePanelComponent } from './employee-panel/employee-panel.component';
 import { UpdateOrderStatusComponent } from './update-order-status/update-order-status.component';
 import { EditProfileUserComponent } from './edit-profile-user/edit-profile-user.component';
 import { HomeComponent } from './home/home.component';
+
 
 
 @NgModule({
@@ -53,11 +57,15 @@ import { HomeComponent } from './home/home.component';
     RaiseTicketComponent,
     UserPanelComponent,
     ViewProductCartComponent,
+
+    RemoveEmpComponent,
+
     EmployeePanelComponent,
     UpdateOrderStatusComponent,
+
     EditProfileUserComponent,
     HomeComponent, 
-	
+
 	],
 	imports: [ BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, ReactiveFormsModule ],
 	providers: [],
