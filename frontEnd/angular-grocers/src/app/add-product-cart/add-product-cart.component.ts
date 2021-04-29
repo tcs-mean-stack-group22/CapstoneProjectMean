@@ -39,9 +39,6 @@ export class AddProductCartComponent implements OnInit {
      this.check = "Item added to cart!";
 
      //Location Reloaded after a 2 seconds
-      setTimeout(function(){
-        window.location.reload();
-      }, 10000);
     
   }
 }
