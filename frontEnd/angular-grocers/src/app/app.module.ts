@@ -25,6 +25,7 @@ import { UserPanelComponent } from './user-panel/user-panel.component';
 import { ViewProductCartComponent } from './view-product-cart/view-product-cart.component';
 import { EmployeePanelComponent } from './employee-panel/employee-panel.component';
 import { UpdateOrderStatusComponent } from './update-order-status/update-order-status.component';
+import { EditProfileUserComponent } from './edit-profile-user/edit-profile-user.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { UpdateOrderStatusComponent } from './update-order-status/update-order-s
     UserPanelComponent,
     ViewProductCartComponent,
     EmployeePanelComponent,
-    UpdateOrderStatusComponent
+    UpdateOrderStatusComponent,
+    EditProfileUserComponent
 
 
 	],
