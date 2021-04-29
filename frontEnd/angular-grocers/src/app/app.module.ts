@@ -28,6 +28,7 @@ import { UpdateOrderStatusComponent } from './update-order-status/update-order-s
 import { EditProfileUserComponent } from './edit-profile-user/edit-profile-user.component';
 
 
+
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -55,6 +56,7 @@ import { EditProfileUserComponent } from './edit-profile-user/edit-profile-user.
     EmployeePanelComponent,
     UpdateOrderStatusComponent,
     EditProfileUserComponent
+    
 
 
 	],
