@@ -14,6 +14,7 @@ import { AddProductCartComponent} from './add-product-cart/add-product-cart.comp
 import { ViewProductCartComponent} from './view-product-cart/view-product-cart.component'
 import { CheckoutComponent} from './checkout/checkout.component';
 import { EditProfileUserComponent} from './edit-profile-user/edit-profile-user.component';
+import { UpdateOrderStatusComponent} from './update-order-status/update-order-status.component';
 
 import { UserPanelComponent} from './user-panel/user-panel.component';
 import { RaiseTicketComponent} from './raise-ticket/raise-ticket.component';
@@ -39,15 +40,18 @@ const routes: Routes = [
 	{ path: 'viewcart', component: ViewProductCartComponent},
 	{ path: 'checkout', component: CheckoutComponent},
 	{ path: 'orderstatus', component: OrderStatusComponent },
-	{ path: 'editprofileuser', component: EditProfileComponent},
+	{ path: 'editprofileuser', component: EditProfileUserComponent},
 	{ path: 'funds', component: FundsComponent },
 
+	//Employee Only Paths
+
+	{ path: 'updateorderstatus' , component: UpdateOrderStatusComponent},
 	{ path: 'sentrequest', component: SendRequestComponent },
 	{ path: 'userpanel', component: UserPanelComponent },
 	{ path: 'raiseticket', component: RaiseTicketComponent },
 	{ path: 'funds', component: FundsComponent },
-	{ path: '', redirectTo: 'adminpanel', pathMatch: 'full' },
-	{ path: '**', redirectTo: 'login', pathMatch: 'full' },
+	{ path: '', redirectTo: 'userpanel', pathMatch: 'full' },
+	{ path: '**', redirectTo: 'adminpanel', pathMatch: 'full' },
 
 	{ path:  'sentrequest' ,component: SendRequestComponent },
 
@@ -56,9 +60,6 @@ const routes: Routes = [
 	{ path: 'funds', component: FundsComponent},
 
 	{ path: 'employee-panel', component: EmployeePanelComponent},
-
-	{ path: '', redirectTo: 'adminpanel', pathMatch: 'full' } ,
-	{ path: '**', redirectTo: 'login', pathMatch: 'full' } 
 
 
 ];

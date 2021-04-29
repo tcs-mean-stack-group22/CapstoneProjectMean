@@ -15,7 +15,7 @@
                         >Home</a>
                 </li>
 
-                <!-- Admin Panles only-->
+                <!-- Admin Panels only-->
                 
                 <li *ngIf = "isAdmin" class="nav-item"> 
                     <a class="nav-item nav-link" routerLink="/viewproduct" routerLinkActive="Active" style="margin-left: 50px;"
@@ -34,7 +34,7 @@
 
 
 
-                <!-- User Only Panles-->
+                <!-- User Only Panels-->
                 <li *ngIf = "isUser" class="nav-item">
                     <a class="nav-item nav-link" routerLink="/addtocart" routerLinkActive="Active" style="margin-left: 50px;"
                         >Add To Cart</a>
@@ -68,11 +68,7 @@
 
 
 
-
-
-
-
-                <!--Employe Panels Only-->
+                <!--Employee Panels Only-->
                 <li *ngIf = "isEmployee" class="nav-item">
                     <a class="nav-item nav-link" routerLink="/lockuser" routerLinkActive="Active" style="margin-left: 50px;"
                         >Lock User</a>
@@ -82,21 +78,20 @@
                         >Edit Profile</a>
                 </li>
                 <li *ngIf = "isEmployee" class="nav-item">
-                    <a *ngIf = "" class="nav-item nav-link" routerLink="/sendrequest" routerLinkActive="Active" style="margin-left: 50px;"
+                    <a  class="nav-item nav-link" routerLink="/sendrequest" routerLinkActive="Active" style="margin-left: 50px;"
                         >Send Request</a>
+                </li>
+
+                <li *ngIf = "isEmployee" class="nav-item">
+                    <a class="nav-item nav-link" routerLink="/updateorderstatus" routerLinkActive="Active" style="margin-left: 50px;"
+                        >Update Orders </a>
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-item nav-link" routerLink="/login" routerLinkActive="Active"
-                        style="margin-left: 50px;" *ngIf="!isUser">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="btn btn-danger" routerLink="/logout" routerLinkActive="Active" style="margin-left: 50px;"
+                    <a class="btn btn-danger" routerLink="/login" routerLinkActive="Active" style="margin-left: 50px;"
                         (click)='logout()' >Logout</a>
                 </li>
             </ul>
         </div>
-
-
     </nav>
 </nav>

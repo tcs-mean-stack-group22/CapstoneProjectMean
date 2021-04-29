@@ -61,4 +61,8 @@ userArr:Array<any> = []
     });
   
   }
+
+  sendTicket(){
+    window.location.href = "http://localhost:4200/raiseticket";
+  }
 }

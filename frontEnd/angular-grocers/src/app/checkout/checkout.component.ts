@@ -16,6 +16,7 @@ export class CheckoutComponent implements OnInit {
   cartArray: string[] = [];
   sum: number = 0 ;
   amount: number = 0;  
+  disprice: any =  [] ; 
 
   ngOnInit(): void {
     let Item = localStorage.getItem("cart")
@@ -33,6 +34,7 @@ export class CheckoutComponent implements OnInit {
     if(info != null){
       let infoArray = JSON.parse(info)
      this.amount = infoArray.amountDeposit;
+
     }
     
 
@@ -42,7 +44,7 @@ export class CheckoutComponent implements OnInit {
     this.productService.retrieveProductById(id).subscribe((result:any)=> {
       this.sum += result[0].price
       this.productList.push(result)
-      console.log("Sum " + this.sum)
+      this.disprice.push ((result[0].discount/100) * result[0].price)
     });
   }
 
