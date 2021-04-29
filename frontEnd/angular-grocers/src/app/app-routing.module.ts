@@ -53,8 +53,6 @@ const routes: Routes = [
 	{ path: 'userpanel', component: UserPanelComponent },
 	{ path: 'raiseticket', component: RaiseTicketComponent },
 	{ path: 'funds', component: FundsComponent },
-	{ path: '', redirectTo: 'userpanel', pathMatch: 'full' },
-	{ path: '**', redirectTo: 'adminpanel', pathMatch: 'full' },
 
 	{ path:  'sentrequest' ,component: SendRequestComponent },
 
@@ -68,14 +66,13 @@ const routes: Routes = [
 	
 	{ path: 'employee-panel', component: EmployeePanelComponent},
 	
-	{ path: '', redirectTo: 'adminpanel', pathMatch: 'full' },
+	{ path: '', redirectTo: 'login', pathMatch: 'full' },
 	
 	{ path: '**', redirectTo: 'login', pathMatch: 'full' }
 	
 ];
 
 
-];
 @NgModule({
 	imports: [RouterModule.forRoot(routes)],
 	exports: [RouterModule]
