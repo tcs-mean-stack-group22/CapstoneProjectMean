@@ -1,4 +1,51 @@
-<div class="main-container container-fluid">
+<div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:4200/addProduct">Add Product</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:4200/viewRequests">View Order Requests</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://localhost:4200/sentrequest">Create/remove Order request</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://localhost:4200/lockuser">Lock/Unlock User</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://localhost:4200/removeemp">Remove Employee</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://localhost:4200/raise-ticket">Raise Ticket</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://localhost:4200/userpanel">User Panel</a>
+              </li>
+              
+    
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    
+
+<div class="d-flex flex-column" style="padding: 20px; ">
+    <p class="text-center" style="font-size: 30px;"> Welcome to Admin Panel</p>
+
     <div class='links-container mb-3'>
         <button class="btn btn-outline-primary" name="viewProducts" (click)='onSelectLink($event)'>View Products</button>
         <button class="btn btn-outline-primary"name="addProduct" (click)='onSelectLink($event)'>Add Product</button>
@@ -12,7 +59,7 @@
 
     </div>
     <br><br>
-    <div class="tab-container">
+    <div class="d-flex flex-column"  >
         <div [ngSwitch]="selectedTab">
             <app-add-product *ngSwitchCase="'addProduct'"></app-add-product>
             <app-view-products *ngSwitchCase="'viewProducts'"></app-view-products>
@@ -21,7 +68,7 @@
             <app-lock-user *ngSwitchCase="'lockuser'"></app-lock-user>
             <app-signup *ngSwitchCase="'createemp'"></app-signup>
             <app-remove-emp *ngSwitchCase="'removeemp'"></app-remove-emp>
-            <a href="http://localhost:4200/removeemp"> Remove Employee</a>
+        
             <app-raise-ticket *ngSwitchCase="'raise-ticket'"></app-raise-ticket>
             <div *ngSwitchDefault>
                 
@@ -29,3 +76,12 @@
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
+
+  </div>

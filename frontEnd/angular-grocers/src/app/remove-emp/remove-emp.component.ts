@@ -28,7 +28,8 @@ export class RemoveEmpComponent implements OnInit {
     this.userServ.deleteUser(id).subscribe(
        result => {
          this.msg = result ;
-         location.reload();
+        // location.reload();
+     //   location.assign("http://localhost:4200/removeemp");
       } , err => this.msg = err )
   }
 
