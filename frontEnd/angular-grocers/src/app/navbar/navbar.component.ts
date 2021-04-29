@@ -19,8 +19,9 @@ export class NavbarComponent implements OnInit {
   ngOnInit(){
     let type = "";
     let info = localStorage.getItem("info")
-    if(info != null){
-      let infoArray = JSON.parse(info)
+    
+    if(info != undefined){
+      let infoArray = JSON.parse(JSON.stringify(info))
      type = infoArray.type;
      if(type == "user"){
        this.isUser = true; 
