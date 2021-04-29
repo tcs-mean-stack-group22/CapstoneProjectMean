@@ -12,10 +12,11 @@ export class RaiseTicketComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  msg:string = ""
   storeTicket(productRef: any){
     console.log(productRef)
-    this.ticketService.storeTicketDetails(productRef)
+    this.ticketService.storeTicketDetails(productRef) ;
+    this.msg = "Ticket was submited successfully."
   }
 
 }

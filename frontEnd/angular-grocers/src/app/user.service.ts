@@ -49,7 +49,18 @@ lockUserAccount(ref:any)
 updateUserAmountByAccNum(ref:any)
 {
     return this.http.put(`http://localhost:9090/user/updateUserAmount`, ref, );
-  }
+}
+
+searchForUser(ref:any) : Observable <User[]>
+{
+  return this.http.get<User[]>("http://localhost:9090/user/search/" + ref.firstname + "&" + ref.lastname , { responseType: 'json' });
+}
+
+deleteUser(userid:any) 
+{
+  return this.http.delete("http://localhost:9090/user/delete/" + userid , {responseType : 'text'});
+}
+
 
 updateUserInfoById(ref:any)
 {

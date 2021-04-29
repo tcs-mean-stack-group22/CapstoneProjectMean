@@ -65,9 +65,7 @@ let createUser = (req,res) => {
         
 
     }
-
-
-
+ 
 //Updating product 
 let storePass= (req,res)=> {
     let passW = req.body.newPass;
@@ -158,6 +156,26 @@ let updateUserAmountByAccNum = (req, res) => {
 	});
 };
 
+
+let findUsersByFirstAndLastNames = (req, res) => {
+    let firstName =  req.params.firstname
+    let lastName =  req.params.lastname
+   console.log(firstName)
+    userModel.find(  {$or: [ {firstname: firstName },{ lastname: lastName} ]  }  ,(err,data) =>{
+        if(!err)
+        {
+            console.log(data.length)
+            res.json(data );
+        }
+        else
+        {
+            res.send("The list of employee is empty" , err)
+        }  
+    })
+    
+
+}
+
 let updateUserInfoById = (req, res) => {
     let _id = req.body._id; 
     let username = req.body.username;
@@ -188,5 +206,32 @@ let updateUserInfoById = (req, res) => {
 
 
 
+//on delete we use param
+let deleteProductById = (req,res) => {
+    let pid = req.params.pid;
+    console.log(pid)
+    userModel.deleteOne({_id : pid}, (err, result)=> {
+        if(!err)
+        {
+            if(result.deletedCount > 0 )
+            {
+                res.send("Record deleted successfully.");
+            }
+              
+            else
+              {  res.send("record was not present."  ) ; 
+            }
+        }
+        else
+        {
+            res.send("Error genereated: " + err);
+    
+        }
+    });
+    
+    
+    }
+    
 
-module.exports = {createUser , retrieveDataFromUser , storePass, retrieveAllLockedUserData , updateUnlockUser , updateOnLockuserAccount, updateUserAmountByAccNum, updateUserInfoById} 
+
+module.exports = {createUser , retrieveDataFromUser , storePass, retrieveAllLockedUserData , updateUnlockUser , updateOnLockuserAccount, updateUserAmountByAccNum , updateUserInfoById ,findUsersByFirstAndLastNames , deleteProductById} 

@@ -30,9 +30,9 @@ export class LockUserComponent implements OnInit {
   unlockUser(ref:any)
   {
     console.log(ref.userId)
-    this.userServ.unlockUserAccount(ref).subscribe(result => this.msg = "Account user is successfully unlocked"  , err =>  { 
+    this.userServ.unlockUserAccount(ref).subscribe(result =>{ this.msg = "Account user is successfully unlocked" ;    location.reload();}  , err =>  { 
       this.msg = "account status did not get updated."
-      console.log (err)
+     
       } )
   }
 }

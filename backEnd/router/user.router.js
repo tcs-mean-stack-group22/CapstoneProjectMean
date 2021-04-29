@@ -17,8 +17,15 @@ router.put("/unlockUser", userControler.updateUnlockUser);
 router.put("/lockUser", userControler.updateOnLockuserAccount);
 
 router.put("/updateUserAmount", userControler.updateUserAmountByAccNum); // Update user amount by user ID
+
+
+router.get("/search/:firstname&:lastname", userControler.findUsersByFirstAndLastNames)
+
+router.delete("/delete/:pid", userControler.deleteProductById)
+
+
 router.put("/updateUserInfo", userControler.updateUserInfoById)
-//router.post("/insert", productRequest.createRequestForm);
+
 /* 
 http://localhost:9090/user/login
 http://localhost:9090/user/lockUser
