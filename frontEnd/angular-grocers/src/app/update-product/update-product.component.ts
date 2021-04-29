@@ -28,7 +28,7 @@ export class UpdateProductComponent implements OnInit {
 		let data = this.productRef.value;
 		data.id = this.id;
 		this.productService.updateProduct(data).subscribe((res) => {
-			console.log(res);
+		//	console.log(res);
 			this.router.navigate([ '/admin-panel' ]);
 		});
 	}

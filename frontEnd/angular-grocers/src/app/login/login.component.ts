@@ -49,9 +49,10 @@ userArr:Array<any> = []
       
       else if (this.cnt < 3)
       {
-   
+      
         this.resultMsg = "Username/password did not match, Please try again. Try:  " + this.cnt;
         this.cnt++;
+     
       }
       else
       {
@@ -60,5 +61,9 @@ userArr:Array<any> = []
       }
     });
   
+  }
+
+  sendTicket(){
+    window.location.href = "http://localhost:4200/raiseticket";
   }
 }

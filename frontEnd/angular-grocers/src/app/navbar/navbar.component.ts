@@ -8,12 +8,36 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   isUser: boolean =false;
+  isAdmin: boolean = false; 
+  isEmployee: boolean = false; 
+  
   constructor() { }
    isOpen : boolean = false;
    toggleNavBar(){
      this.isOpen= !this.isOpen;
    }
   ngOnInit(){
+    let type = "";
+    let info = localStorage.getItem("info")
+    
+    if(info != undefined){
+      let infoArray = JSON.parse(JSON.stringify(info))
+     type = infoArray.type;
+     if(type == "user"){
+       this.isUser = true; 
+       this.isAdmin = false;
+       this.isEmployee = false;
+     } else if (type == "admin") {
+       this.isUser = false; 
+       this.isAdmin = true; 
+       this.isEmployee = false;
+     } else if (type == "employee"){
+       this.isUser = false; 
+       this.isAdmin = false; 
+       this.isEmployee = true; 
+     }
+    }
+
     // this.as.user.subscribe((user)=>
     //   {
     //     if(user)
@@ -34,7 +58,7 @@ export class NavbarComponent implements OnInit {
       
   }
   logout(){
-    // this.as.logout();
+    localStorage.clear();
     
   }
 

@@ -1,3 +1,10 @@
+<nav class="nav">
+    <a class="nav-link active" aria-current="page" href="#">Home</a>
+    <a class="nav-link" href="http://localhost:4200/signup">Sign up</a>
+    <a class="nav-link" href="#">About us</a>
+</nav>
+
+
 <div class="container">
     <div class="body" style="align-items: center;">
         <h2 class="text-center" style="margin:40px;">Login Form!</h2>
@@ -13,6 +20,10 @@
                 <input type="reset" class="col-4 btn btn-secondary btn-sm float-left" value="Reset">
             </form>
             <p class="text-end"> {{resultMsg}} </p>
+
+            <br> 
+            <a class="nav-item nav-link" routerLink="/raiseticket" routerLinkActive="Active" style="margin-left: 50px;"
+                        >Locked Out?</a>
         </div>
     </div>
 </div>
