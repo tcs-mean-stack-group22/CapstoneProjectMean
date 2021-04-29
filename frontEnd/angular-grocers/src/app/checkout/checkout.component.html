@@ -20,12 +20,13 @@
         </tbody>
     </table>
     <div class="total">
-        <strong>Total Cost : {{sum | currency}}</strong><br><br>
-        <strong>Total Funds : {{amount | currency}}</strong><br><br>
-        <button type="button" class="btn btn-secondary" routerLink="/checkout" (click)="buyCart()" style="margin-bottom: 200px;">Checkout</button>
+        <strong>Total Cost : {{sum | currency}}</strong>
+        <strong>Total Funds : {{amount | currency}}</strong>
     </div>
 
-    
+    <div class="container">
+        <button type="button" class="btn btn-secondary" routerLink="/checkout" (click)="buyCart()">Checkout</button>
+    </div>
 
 
 </div>
