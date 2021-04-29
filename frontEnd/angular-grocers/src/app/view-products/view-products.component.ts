@@ -16,7 +16,7 @@ export class ViewProductsComponent implements OnInit {
 		this.productService.retrieveProducts().subscribe((res) => (this.productList = res));
 	}
 	onUpdate(id: any) {
-		this.router.navigate([ '/update-product' ], { queryParams: { id: id } });
+		this.router.navigate([ '/updateproduct' ], { queryParams: { id: id } });
 	}
 
 	onDelete(id: any) {

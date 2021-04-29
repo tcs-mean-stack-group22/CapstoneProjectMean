@@ -1,3 +1,4 @@
+import { templateJitUrl } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../user.service';
@@ -12,6 +13,7 @@ export class LoginComponent implements OnInit {
   constructor(public userServ:UserService,private router:Router) { }
 
   ngOnInit(): void {
+    this.reloadPage();
   }
 
 
@@ -23,8 +25,6 @@ cnt:number = 1;
 userArr:Array<any> = []
   login(info:any) 
   {
-    this.userServ.loginVertify(info). 
-    subscribe(result => this.router.navigate(['/adminpanel']));
     this.userServ.loginVertify(info).
     subscribe(result => 
       {
@@ -33,6 +33,22 @@ userArr:Array<any> = []
         let tmp = JSON.stringify(result)
     
         localStorage.setItem("info", tmp);
+
+        let x = JSON.parse(tmp)
+
+        console.log(x.type)
+
+        if (x.type == "user"){
+          this.router.navigate(['/userpanel']);
+        }
+
+        if (x.type == "admin"){
+          this.router.navigate(['/adminpanel']);
+        }
+
+        if (x.type == "employee"){
+          this.router.navigate(['/employeepanel']);
+        }
 
       
       }, error => { 
@@ -59,10 +75,18 @@ userArr:Array<any> = []
         this.resultMsg = ""
       }
     });
-  
   }
 
-  sendTicket(){
-    window.location.href = "http://localhost:4200/raiseticket";
-  }
+  reloadPage() {
+		var currentDocumentTimestamp = new Date(performance.timing.domLoading).getTime();
+		// Current Time //
+		var now = Date.now();
+		// Total Process Lenght as Minutes //
+		var tenSec = 10 * 1000;
+		// End Time of Process //
+		var plusTenSec = currentDocumentTimestamp + tenSec;
+		if (now > plusTenSec) {
+			location.reload();
+		}
+	}
 }

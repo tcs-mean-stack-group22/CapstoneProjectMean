@@ -3,6 +3,7 @@
     <a class="nav-link" href="http://localhost:4200/login">Login</a>
     <a class="nav-link" href="http://localhost:4200/editprofile">Edit profile</a>
 </nav>
+
 <div class="form-container">
     <form #ngRef="ngForm" (ngSubmit)="addUser(ngRef.value)">
         First Name : <input type="text" name="firstname" class="form-control form-control-sm" ngModel required>
@@ -23,6 +24,10 @@
             <div class="dropdown-menu-right  dropdown-menu-right">
                 <button class="dropdown-item " type="button" (click)="getValue('user')">End User</button>
                 <button class="dropdown-item" type="button" (click)="getValue('emp')">Employee</button>
+
+    
+    
+ 
             </div>
         </div>
         <div class="submit">

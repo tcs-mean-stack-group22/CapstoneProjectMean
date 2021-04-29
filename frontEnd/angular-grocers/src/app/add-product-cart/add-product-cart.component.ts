@@ -17,20 +17,28 @@ export class AddProductCartComponent implements OnInit {
 
   ngOnInit(): void {
     this.productService.retrieveProducts().subscribe((res) => (this.productList = res));
-    
-  }
 
-
-  addToCart(id: any) {                            // Pulls from local storage First then adds the new product ID to array then restores the item. 
     if(localStorage.getItem("cart") != null){
       var pastCart = localStorage.getItem("cart");
+      console.log(pastCart)
       
       console.log("Past Cart:" + pastCart)
       if(pastCart === 'string'){
         this.cartArray.push(JSON.parse(pastCart))
+        console.log(this.cartArray)
       }
-     this.cartArray.push(id)
-     localStorage.setItem("cart", JSON.stringify(this.cartArray))
     }
+  }
+
+
+  addToCart(id: any) {                            // Pulls from local storage First then adds the new product ID to array then restores the item. 
+     this.cartArray.push(id)
+     console.log(this.cartArray)
+     console.log("Cart Array ^")
+     localStorage.setItem("cart", JSON.stringify(this.cartArray))
+     this.check = "Item added to cart!";
+
+     //Location Reloaded after a 2 seconds
+    
   }
 }

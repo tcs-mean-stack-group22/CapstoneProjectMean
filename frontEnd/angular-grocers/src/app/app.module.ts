@@ -29,6 +29,8 @@ import { RemoveEmpComponent } from './remove-emp/remove-emp.component';
 import { EmployeePanelComponent } from './employee-panel/employee-panel.component';
 import { UpdateOrderStatusComponent } from './update-order-status/update-order-status.component';
 import { EditProfileUserComponent } from './edit-profile-user/edit-profile-user.component';
+import { HomeComponent } from './home/home.component';
+import { GenerateReportsComponent } from './generate-reports/generate-reports.component';
 
 
 
@@ -61,10 +63,10 @@ import { EditProfileUserComponent } from './edit-profile-user/edit-profile-user.
 
     EmployeePanelComponent,
     UpdateOrderStatusComponent,
-    EditProfileUserComponent
-    
 
-
+    EditProfileUserComponent,
+    HomeComponent,
+    GenerateReportsComponent, 
 
 	],
 	imports: [ BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, ReactiveFormsModule ],
