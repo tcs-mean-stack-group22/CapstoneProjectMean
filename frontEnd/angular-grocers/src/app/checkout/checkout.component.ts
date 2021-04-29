@@ -74,6 +74,7 @@ export class CheckoutComponent implements OnInit {
     } )
     
     localStorage.setItem("cart", "")
+    location.reload();
   }
 
 }
