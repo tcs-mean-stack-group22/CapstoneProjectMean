@@ -33,11 +33,10 @@ userArr:Array<any> = []
         let tmp = JSON.stringify(result)
     
         localStorage.setItem("info", tmp);
-  /*       console.log(tmp.userId)
-        console.log(tmp.firstname)  //undefined    */
+
       
       }, error => { 
-      //console.log(error) ;
+    
       
       console.log(this.cnt)
       if (this.cnt == 3 )
