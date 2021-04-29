@@ -1,10 +1,87 @@
 
 
+
+<div>
+    <div class="row shop-tracking-status">
+    
+        <div class="col-md-12">
+            <div class="well">
+        
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="inputOrderTrackingID" class="col-sm-2 control-label">Order id</label>
+                            <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputOrderTrackingID" value="" placeholder="# put your order id here" #idNum>
+                            <button type="button" id="shopGetOrderStatusID" class="btn btn-success" (click)="orderImage(idNum.value)">Get status</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngIf = "printImage"> 
+        
+                <h4>Your order status:</h4> 
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <span class="prefix">Date created:</span>
+                        <span class="label label-success"> {{dateCreated}} </span>
+                    </li>
+                    <li class="list-group-item">
+                        <span class="prefix">Last update:</span>
+                        <span class="label label-success"> {{dateDelivered}} </span>
+                    </li>
+                </ul>
+    
+                <div  class="order-status">
+    
+                    <div class="order-status-timeline">
+                        <!-- class names: c0 c1 c2 c3 and c4 -->
+                        <div *ngIf="firstStatus" class="order-status-timeline-completion c0"> Info</div>
+                        <div *ngIf="secondStatus" class="order-status-timeline-completion c1"> Info</div>
+                        <div *ngIf="thirdStatus" class="order-status-timeline-completion c2"> Info</div>
+                        <div *ngIf="fourthStatus" class="order-status-timeline-completion c3"> Info</div>
+                        <div *ngIf="fifthStatus" class="order-status-timeline-completion c4"> Info</div>
+                    </div>
+    
+                    <div class="image-order-status image-order-status-new active img-circle">
+                        <span class="status">Order Booked</span>
+                        <div class="icon"></div>
+                    </div>
+                    <div class="image-order-status image-order-status-active active img-circle">
+                        <span class="status">Preparing to be Shipped</span>
+                        <div class="icon"></div>
+                    </div>
+                    <div class="image-order-status image-order-status-intransit active img-circle">
+                        <span class="status">In Transit</span>
+                        <div class="icon"></div>
+                    </div>
+                    <div class="image-order-status image-order-status-delivered active img-circle">
+                        <span class="status">Out for Delivery</span>
+                        <div class="icon"></div>
+                    </div>
+                    <div class="image-order-status image-order-status-completed active img-circle">
+                        <span class="status">Completed</span>
+                        <div class="icon"></div>
+                    </div>
+    
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+
 <div>
     <table class="table">
         <thead>
             <tr>
                 <th scope="col">#</th>
+                <th scope="col">Order Id</th>
                 <th scope="col">Status</th>
                 <th scope="col">Date Ordered</th>
                 <th scope="col">Planned Delivered Date</th>
@@ -15,6 +92,7 @@
         <tbody *ngFor="let order of orderList">
             <tr *ngFor = "let p of order; let i = index">
                     <th>{{i+1}}</th>
+                    <td>{{p._id}}</td>
                     <td>{{p.status}}</td>
                     <td>{{p.date_Ordered}}</td>
                     <td>{{p.date_Delivered}}</td>

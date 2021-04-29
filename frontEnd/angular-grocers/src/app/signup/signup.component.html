@@ -28,7 +28,8 @@
                     Amount Deposit : <input type="number" class="form-control" name="amountDeposit" ngModel > <br>
                     <div class="submit">
                          
-            <input type="submit" class="col-4 btn btn-primary btn-sm"  value="Add Info" >
+            <input type="submit" class="col-4 btn btn-primary btn-sm"  value="Add Info" (click)="ngRef.resetForm()" >
+
             <input type="reset" class="col-4 btn btn-secondary btn-sm" value="Reset">
             {{resultMsg}}      
                     </div>

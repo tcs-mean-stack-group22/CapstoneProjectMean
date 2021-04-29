@@ -16,6 +16,7 @@ export class CheckoutComponent implements OnInit {
   cartArray: string[] = [];
   sum: number = 0 ;
   amount: number = 0;  
+  disprice: any =  [] ; 
 
   ngOnInit(): void {
     let Item = localStorage.getItem("cart")
@@ -27,8 +28,15 @@ export class CheckoutComponent implements OnInit {
       console.log("Element is : " + element)
       this.searchDetails((element))
     });
+  
 
-    this.amount = 100; 
+    let info = localStorage.getItem("info")
+    if(info != null){
+      let infoArray = JSON.parse(info)
+     this.amount = infoArray.amountDeposit;
+
+    }
+    
 
   }
   searchDetails(id:any){
@@ -36,32 +44,39 @@ export class CheckoutComponent implements OnInit {
     this.productService.retrieveProductById(id).subscribe((result:any)=> {
       this.sum += result[0].price
       this.productList.push(result)
-      console.log("Sum " + this.sum)
+      this.disprice.push ((result[0].discount/100) * result[0].price)
     });
   }
 
   buyCart(){
-    let user_id = localStorage.getItem("info")
-    let a; 
-    let b; 
-    if(user_id != null){
-        a = JSON.parse(user_id)
-        b = a[0]
-    }
-    
+    let a = localStorage.getItem("info")
+    let array; 
+    let user_id; 
 
-    let y = this.amount - this.sum;
+    if(a != null){
+        array = JSON.parse(a)
+        user_id = array.userId
+    }
+
+    //OverWrite Local storage funds amount
+    let info = localStorage.getItem("info")
+    if(info != null){
+      let infoArray = JSON.parse(info)
+      infoArray.amountDeposit = this.amount - this.sum;
+      localStorage.setItem("info", JSON.stringify(infoArray))
+    }
+
+    // Send Order to table
     let date: Date =  new Date();  
     let date2: Date =  new Date(); 
     date2.setDate(date.getDate()+7);
-    let model = new Order(b,date, date2,"Preparing to be Shipped",this.productList.length )
-
+    let model = new Order(user_id,date, date2,"Preparing to be Shipped",this.productList.length)
     this.orderService.updateOrders(model).subscribe((res) => {
       console.log(res)
     } )
-  
-    console.log("Funds will be update from Backend")
-    console.log(this.productList.length)
+    
+    localStorage.setItem("cart", "")
+    location.reload();
   }
 
 }

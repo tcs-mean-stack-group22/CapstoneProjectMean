@@ -156,6 +156,7 @@ let updateUserAmountByAccNum = (req, res) => {
 	});
 };
 
+
 let findUsersByFirstAndLastNames = (req, res) => {
     let firstName =  req.params.firstname
     let lastName =  req.params.lastname
@@ -174,6 +175,33 @@ let findUsersByFirstAndLastNames = (req, res) => {
     
 
 }
+
+let updateUserInfoById = (req, res) => {
+    let _id = req.body._id; 
+    let username = req.body.username;
+    let address = req.body.address;
+    let password = req.body.password;
+    let phoneNum = req.body.phoneNum;
+    let email = req.body.email; 
+    console.log("Id is " + _id)
+
+	
+	userModel.updateOne({_id:_id}, {$set:{username:username, address:address, password:password, phoneNum:phoneNum, email:email}}, (err, result) => {
+		if (!err) {
+			if (result.nModified > 0) {
+				return res.status(200).json({
+					message: 'User Info updated successfully'
+				});
+			} else {
+				return res.status(500).json({
+					error: err,
+					message: 'User Info not updated'
+				});
+			}
+		}
+	});
+};
+
 
 
 
@@ -206,4 +234,4 @@ let deleteProductById = (req,res) => {
     
 
 
-module.exports = {createUser , retrieveDataFromUser , storePass, retrieveAllLockedUserData , updateUnlockUser , updateOnLockuserAccount, updateUserAmountByAccNum , findUsersByFirstAndLastNames , deleteProductById} 
+module.exports = {createUser , retrieveDataFromUser , storePass, retrieveAllLockedUserData , updateUnlockUser , updateOnLockuserAccount, updateUserAmountByAccNum , updateUserInfoById ,findUsersByFirstAndLastNames , deleteProductById} 

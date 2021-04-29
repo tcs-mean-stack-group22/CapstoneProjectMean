@@ -1,12 +1,15 @@
 <div>
-    <h2>Edit Profile</h2>
+    <h2>Add Funds</h2>
     <form #ngRef="ngForm" (ngSubmit)= "addFunds(ngRef.value)">
         User Account Number : <input type="number" name = "accountNumber" ngModel required> <br>
         Amount to Add : <input type="number" name = "amountDeposit" ngModel required> <br>
         <br> <br>
+        <h3> Total Funds : {{funds}}</h3>
        
-        <input type="submit" value="Log in"  (click)="ngRef.resetForm()">
-        <input type="reset" value="reset">
+
+        <input type="submit" value="Add Funds">
+        <input type="reset" value="Reset">
+
      </form>
      {{resultMsg}}
 </div>

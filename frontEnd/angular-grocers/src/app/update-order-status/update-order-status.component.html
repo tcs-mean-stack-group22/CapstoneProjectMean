@@ -1,0 +1,33 @@
+
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Status</th>
+                <th scope="col">Date Ordered</th>
+                <th scope="col">Planned Delivered Date</th>
+                <th scope="col">Number of Items</th>
+                <th scope="col">User ID</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let order of orderList" class = "active-row">
+            <tr *ngFor = "let p of order; let i = index" class="active-row">
+                    <th>{{i+1}}</th>
+                    <td>
+                        <button class="brn btn-primary" (click)="shipBook(p)">Order Booked</button>
+                        <button class="brn btn-danger" (click)="inTransit(p)">In Transit</button>
+                        <button class="brn btn-primary" (click)="outForDelivery(p)">Out for Delivery</button>
+                        <button class="brn btn-danger" (click)="delivered(p)">Delivered</button>
+                    </td>
+                    <td>{{p.date_Ordered}}</td>
+                    <td>{{p.date_Delivered}}</td>
+                    <td>{{p.number_Items}}</td>
+                    <td>{{p.user_id}}</td>
+            </tr>
+        </tbody>
+    </table>
+    {{msg}}
+</div>
+

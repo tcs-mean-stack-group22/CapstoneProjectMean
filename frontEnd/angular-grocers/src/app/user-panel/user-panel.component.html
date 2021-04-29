@@ -1,24 +1,32 @@
 <div class="main-container container-fluid">
-    <div class='links-container mb-3'>
-        <button name="addProdcutCart" (click)='onSelectLink($event)'>Add to Cart</button>
-        <button name="viewProductCart" (click)='onSelectLink($event)'>View Cart</button>
-        <button name="checkout" (click)='onSelectLink($event)'>Checkout</button>
-        <button name="orderStatus" (click)='onSelectLink($event)'>Order Status</button>
-        <button name="funds" (click)='onSelectLink($event)'>Funds</button>
-        <button name="raiseTicket" (click)='onSelectLink($event)'>Raise Ticket</button>
-        <button name="editProfile" (click)='onSelectLink($event)'>Edit Profile</button>
-    </div>
-    <div class="tab-container">
-        <div [ngSwitch]="selectedTab">
-            <app-add-product-cart *ngSwitchCase="'addProdcutCart'"> </app-add-product-cart>
-            <app-view-product-cart *ngSwitchCase="'viewProductCart'"></app-view-product-cart>
-            <app-checkout *ngSwitchCase="'checkout'"></app-checkout>
-            <app-order-status *ngSwitchCase="'orderStatus'" > </app-order-status>
-            <app-funds *ngSwitchCase="'funds'" > </app-funds>
-            <app-raise-ticket *ngSwitchCase="'raiseTicket'"></app-raise-ticket>
-            <app-edit-profile *ngSwitchCase="'editProfile'"> </app-edit-profile>
-            <div *ngSwitchDefault>
-                <h1>Welcome to User Panel</h1>
+    <div class="body" style="align-items: center;">
+        <h2 class="text-center" style="margin:20px 0 60px 0;">Welcome to User Panel</h2>
+        <div class='links-container mb-3'>
+            <button class="btn btn-outline-primary" name="addProdcutCart" (click)='onSelectLink($event)'>Add to
+                Cart</button>
+            <button class="btn btn-outline-primary" name="viewProductCart" (click)='onSelectLink($event)'>View
+                Cart</button>
+            <button class="btn btn-outline-primary" name="checkout" (click)='onSelectLink($event)'>Checkout</button>
+            <button class="btn btn-outline-primary" name="orderStatus" (click)='onSelectLink($event)'>Order
+                Status</button>
+            <button class="btn btn-outline-primary" name="funds" (click)='onSelectLink($event)'>Funds</button>
+            <button class="btn btn-outline-primary" name="raiseTicket" (click)='onSelectLink($event)'>Raise
+                Ticket</button>
+            <button class="btn btn-outline-primary" name="editProfile" (click)='onSelectLink($event)'>Edit
+                Profile</button>
+        </div>
+        <div class="tab-container">
+            <div [ngSwitch]="selectedTab">
+                <app-add-product-cart *ngSwitchCase="'addProdcutCart'"> </app-add-product-cart>
+                <app-view-product-cart *ngSwitchCase="'viewProductCart'"></app-view-product-cart>
+                <app-checkout *ngSwitchCase="'checkout'"></app-checkout>
+                <app-order-status *ngSwitchCase="'orderStatus'"> </app-order-status>
+                <app-funds *ngSwitchCase="'funds'"> </app-funds>
+                <app-raise-ticket *ngSwitchCase="'raiseTicket'"></app-raise-ticket>
+                <app-edit-profile-user *ngSwitchCase="'editProfile'"> </app-edit-profile-user>
+                <div *ngSwitchDefault>
+                    <h1></h1>
+                </div>
             </div>
         </div>
     </div>

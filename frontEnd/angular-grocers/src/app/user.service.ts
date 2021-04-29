@@ -62,4 +62,8 @@ deleteUser(userid:any)
 }
 
 
+updateUserInfoById(ref:any)
+{
+    return this.http.put(`http://localhost:9090/user/updateUserInfo`, ref, );
+  }
 }

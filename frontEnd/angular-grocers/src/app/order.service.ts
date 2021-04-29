@@ -21,5 +21,11 @@ export class OrderService {
 		return this.http.get(`http://localhost:9090/order/getOrderDetailsById/${user_id}`, { responseType: 'json' });
 	}
 
+  updateOrderStatusById(ref: any){
+    return this.http.put("http://localhost:9090/order/updateStatus", ref)
+  }
 
+  retrieveOrderItemById(_id: any) {
+		return this.http.get(`http://localhost:9090/order/getOrderDetailsByItemId/${_id}`, { responseType: 'json' });
+	}
 }
