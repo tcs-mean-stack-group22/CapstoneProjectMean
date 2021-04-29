@@ -1,0 +1,22 @@
+.output{
+    
+    
+    height: 60vh;
+    border: 1px solid black;
+    margin: 100px;
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: scroll;
+  }
+
+  form{
+    display: block;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    min-width: 400px;
+    padding: 40px;
+ }
