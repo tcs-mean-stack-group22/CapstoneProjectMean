@@ -1,15 +1,50 @@
 <div class="container">
     <div class="body" style="align-items: center;">
         <div>
-            <h2>Remove employee by user ID or username</h2>
             
-<form #ngRef="ngForm" (ngSubmit)= "removeEmp(ngRef.value)">
-    User Id : <input type="text" name = "userId" ngModel > <br>
-    User Name : <input type="textr" name = "userName" ngModel required>
-    <br> <br>
-    <input type="submit" value="Increase/Decrease product"  (click)="ngRef.resetForm()">
-    <input type="reset" value="reset">
- </form>
-        </div>
+<div class="output">
+    <h2>Search Employees by names:</h2>
+    <table class="table table-striped" style="padding: 4px;">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+           
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Status</th>
+                <th scope="col">Delete</th>
+            
+            </tr>
+        </thead>
+        <tbody *ngFor="let e of empArr; let i = index" class="active-row">
+            <tr id={{e._id}} class="active-row">
+                <th>{{i+1}}</th>
+
+                <td>{{e.firstname}}</td>
+                <td>{{e.lastname}}</td>
+                <td>{{e.type}}</td>
+              
+                <td>
+                
+                    <button class="brn btn-danger" (click)="onDelete(e._id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class ="text-center">
+        <form #ngRef="ngForm" (ngSubmit)= "removeEmp(ngRef.value)">
+            First Name : <input type="textr" name = "firstname" ngModel required>
+            Last Name : <input type="textr" name = "lastname" ngModel required>
+            <br> <br>
+         
+            <input type="submit" class="col-1 btn btn-primary btn-sm mr-4"  value="Search"  >
+            <input type="reset" class="col-1 btn btn-secondary btn-sm" value="reset">
+         </form>
     </div>
+    
+</div>
+
+
+
+      
 </div>

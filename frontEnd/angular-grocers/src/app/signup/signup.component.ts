@@ -21,7 +21,7 @@ resultMsg:string = "";
 addUser(userInfo:any) {
 
     userInfo.type = this.userType;
-console.log(this.userType)
+
     this.userServ.storeUserInfo(userInfo). 
     subscribe(result => {   this.resultMsg = result  } , error => this.resultMsg ="Sign up failed, Please Try again");
   }
