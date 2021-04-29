@@ -3,35 +3,32 @@
     <a class="nav-link" href="http://localhost:4200/login">Login</a>
     <a class="nav-link" href="http://localhost:4200/editprofile">Edit profile</a>
 </nav>
-    
-    
-    <div class="form-container">
-           <form #ngRef="ngForm" (ngSubmit)="addUser(ngRef.value)" >
-          
-            First Name : <input type="text"  name="firstname" class="form-control form-control-sm" ngModel required> 
-            Last Name : <input type="text"class="form-control form-control-sm" name="lastname" ngModel required>
-            Email : <input type="text" class="form-control form-control-sm" name="email" ngModel > 
-            User Name : <input type="text" class="form-control form-control-sm" name="username" ngModel required> 
-            Password : <input type="text" class="form-control form-control-sm" name="password" ngModel required> 
-            Date of Birth : <input type="date" class="form-control form-control-sm" name="dob" ngModel > 
-            Phone Number : <input type="number" class="form-control form-control-sm" name="phoneNum" ngModel > 
-            Address : <input type="text" class="form-control form-control-sm" name="address" ngModel > 
-            Account Number : <input type="number" class="form-control form-control-sm" name="accountnumber" ngModel > 
-            Amount Deposit : <input type="number" class="form-control form-control-sm" name="amountDeposit" ngModel > 
-            <div class="btn-group">
-                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="true">
-                    User-Type
-                </button>
-                <div class="dropdown-menu-right  dropdown-menu-right">
-                    <button class="dropdown-item " type="button" (click) ="getValue('user')"  >End User</button>
-                    <button class="dropdown-item" type="button"  (click) ="getValue('emp')" >Employee</button>
-                </div>
+<div class="form-container">
+    <form #ngRef="ngForm" (ngSubmit)="addUser(ngRef.value)">
+        First Name : <input type="text" name="firstname" class="form-control form-control-sm" ngModel required>
+        Last Name : <input type="text" class="form-control form-control-sm" name="lastname" ngModel required>
+        Email : <input type="text" class="form-control form-control-sm" name="email" ngModel>
+        User Name : <input type="text" class="form-control form-control-sm" name="username" ngModel required>
+        Password : <input type="text" class="form-control form-control-sm" name="password" ngModel required>
+        Date of Birth : <input type="date" class="form-control form-control-sm" name="dob" ngModel>
+        Phone Number : <input type="number" class="form-control form-control-sm" name="phoneNum" ngModel>
+        Address : <input type="text" class="form-control form-control-sm" name="address" ngModel>
+        Account Number : <input type="number" class="form-control form-control-sm" name="accountnumber" ngModel>
+        Amount Deposit : <input type="number" class="form-control form-control-sm" name="amountDeposit" ngModel>
+        <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="true">
+                User-Type
+            </button>
+            <div class="dropdown-menu-right  dropdown-menu-right">
+                <button class="dropdown-item " type="button" (click)="getValue('user')">End User</button>
+                <button class="dropdown-item" type="button" (click)="getValue('emp')">Employee</button>
             </div>
-           
-                <input type="submit" class="col-4 btn btn-primary btn-sm"  value="Add Info">
-                <input type="reset" class="col-4 btn btn-secondary btn-sm" value="Reset">
-           
-            {{resultMsg}}
-        </form>
-    </div>
+        </div>
+        <div class="submit">
+        <input type="submit" class="col-4 btn btn-primary btn-sm float-left" value="Add Info">
+        <input type="reset" class="col-4 btn btn-secondary btn-sm float-right" value="Reset">
+       </div>
+        {{resultMsg}}
+    </form>
+</div>
