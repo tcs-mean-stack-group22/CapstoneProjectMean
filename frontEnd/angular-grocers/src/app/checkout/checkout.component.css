@@ -6,15 +6,14 @@
   top: 340px;
 }
 .output {
-  width: 90vw;
-  height: 80vh;
-  border: 1px solid black;
-  position: relative;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  margin: 100px;
+    height: 60vh;
+    border: 1px solid black;
+    margin: 100px;
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
   overflow: scroll;
 }
 .total {
@@ -29,12 +28,5 @@
   width: 200px;
   height: 100px;
   margin: 80px 90px 60px 1020px; 
-  /* position: relative;
-  right: 0;
-  width: 200px;
-  height: 100px;
-  text-align: right;
-  top: 230px;
-  bottom: 100px;
-  margin-right: 5%; */
+  
 }
