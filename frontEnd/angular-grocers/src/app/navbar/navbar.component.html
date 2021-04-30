@@ -10,11 +10,7 @@
 
         <div class="collapse navbar-collapse" [class.show]="isOpen" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li *ngIf="isAdmin" class="nav-item">
-                    <a class="nav-item nav-link" routerLink="/adminpanel" routerLinkActive="Active"
-                        style="margin-left: 50px;">Home</a>
-                </li>
-
+            
                 <!-- Admin Panels only-->
 
                 <li *ngIf="isAdmin" class="nav-item">
@@ -35,11 +31,6 @@
                 <li *ngIf="isAdmin" class="nav-item">
                     <a class="nav-item nav-link" routerLink="/generatereports" routerLinkActive="Active"
                         style="margin-left: 50px;">Generate Reports</a>
-                </li>
-
-                <li *ngIf="isAdmin" class="nav-item">
-                    <a class="nav-item nav-link" routerLink="/lockuser" routerLinkActive="Active"
-                        style="margin-left: 50px;">Unlock User</a>
                 </li>
 
                 <li *ngIf="isAdmin" class="nav-item">

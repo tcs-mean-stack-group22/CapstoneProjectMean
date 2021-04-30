@@ -6,7 +6,7 @@
                 Product Name : <input type="text" class="form-control" name="pname" ngModel required> <br>
                 Product Quanity : <input type="number" class="form-control" name="quanity" ngModel required>
                 <br> 
-                <input type="submit" class="col-4 btn btn-primary btn-sm float-left" value="Inc+/Dec-">
+                <input type="submit" class="col-4 btn btn-primary btn-sm float-left" value="Send">
                 <input type="reset" class="col-4 btn btn-secondary btn-sm float-right" value="reset">
             </form>
         </div>
@@ -21,7 +21,7 @@
             <form #ref="ngForm" (ngSubmit)="removeForm(ref.value)">
                 Product Name to be Deleted: <br><br> <input type="text" class="form-control" name="delName" ngModel required>
                  
-                <input type="submit" style="margin-left: 120px;" class="col-4 btn btn-primary " value="removeForm">
+                <input type="submit" style="margin-left: 120px;" class="col-4 btn btn-primary " value="Remove">
             </form>
 
         </div>

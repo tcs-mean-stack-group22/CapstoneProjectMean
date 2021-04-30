@@ -15,12 +15,11 @@
      }
 
 .btn{
-    margin:20px;
+    margin:20px 0 100px 0  ;    
     display: inline;
+
     padding: 8px;
     justify-content: center;
-    align-items: center;
-     
-    
+    align-items: center;   
 }
 

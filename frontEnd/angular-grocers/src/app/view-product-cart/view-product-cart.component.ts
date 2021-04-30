@@ -44,8 +44,10 @@ export class ViewProductCartComponent implements OnInit {
     if(this.cartArray.includes(id)){
       this.cartArray.splice(this.cartArray.indexOf(id),1)
       localStorage.setItem("cart", JSON.stringify(this.cartArray))
+      window.location.reload()
     } else {
       console.log("Item was not found in cart")
+      
     }
 	}
 }
