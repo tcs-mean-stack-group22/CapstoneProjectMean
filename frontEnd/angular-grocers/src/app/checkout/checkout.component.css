@@ -1,42 +1,40 @@
-.pagination{
-    position: absolute;
-    right: 0;
-    width: 200px;
-    height: 100px;
-    top: 340px;
+.pagination {
+  position: absolute;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  top: 340px;
 }
-.total{
-    position: absolute;
-    right: 0;
-    width: 200px;
-    height: 100px;
-    padding: 50px;
-    margin:40px 40px 2000px 0%;
+.output {
+  width: 90vw;
+  height: 80vh;
+  border: 1px solid black;
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 100px;
+  overflow: scroll;
 }
+.total {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  margin: 0px 0px 0px 990px; 
+}
+.container {
 
-.output{
-    
-    width: 90vw;
-     height: 60vh;
-     /* border: 1px solid black; */
-     border: 1px solid black;
-     position: relative;
-     top: 0;
-     left: 0;
-     bottom: 0;
-     right: 0;
-     margin:100px ;
-     overflow: scroll;
-   }
-
-   .container{
-    position: relative;
-    right: 0;
-    width: 200px;
-    height: 100px;
-    text-align: right;
-    top: 230px;
-    bottom: 100px;
-    margin-right:5%;
-    
+    position: absolute;
+  width: 200px;
+  height: 100px;
+  margin: 80px 90px 60px 1020px; 
+  /* position: relative;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  text-align: right;
+  top: 230px;
+  bottom: 100px;
+  margin-right: 5%; */
 }
